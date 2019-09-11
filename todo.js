@@ -10,6 +10,9 @@ switch(command) {
     case 'add':
         TodoController.addTodo(parameters[0]);
     break;
+    case 'findById':
+        TodoController.getTodoById(Number(parameters[0]));
+    break;
     default:
         console.log('node todo.js');
         console.log('node todo.js help');

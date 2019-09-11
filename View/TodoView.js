@@ -5,6 +5,14 @@ class TodoView {
         }
     }
 
+    static showTodo(todo) {
+        if(todo === undefined) {
+            console.log('Task not found!');
+        } else {
+            console.log(`${todo.id}. ${todo.task}`);
+        }
+    }
+
     static showAddMessage(task) {
         console.log(`Added ${task} to your TODO list...`)
     }
