@@ -1,6 +1,8 @@
 class TodoView {
     static displayList(data) {
-        console.table(data)
+        for (let i = 0; i < data.length; i++) {
+            console.log(`${data[i].id}. [${data[i].completed}] ${data[i].todo}`)
+        }
     }
 
     static displayListAdded(data) {

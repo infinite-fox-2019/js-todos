@@ -4,17 +4,13 @@ class Todo {
     constructor(id, todo) {
         this.id = id
         this.todo = todo
+        this.completed = ''
     }
     
     static findAll() {
         const data = JSON.parse(fs.readFileSync('./data.json'))
-        const data_arr = []
-
-        for (let i = 0; i < data.length; i++) {
-            data_arr.push(new Todo(data[i].id, data[i].todo))
-        }
-
-        return data_arr
+    
+        return data
     }
 
     static addData(todo) {
@@ -50,11 +46,38 @@ class Todo {
             }
         }
 
-        
-
         fs.writeFileSync('./data.json', JSON.stringify(data, null, 4))
         
         return temp_data
+    }
+
+    static complete(id) {
+        const data = JSON.parse(fs.readFileSync('./data.json'))
+
+        for (let i = 0; i < data.length; i++) {
+            if (data[i].id === id) {
+                data[i].completed = 'X'
+            }
+        }
+
+        fs.writeFileSync('./data.json', JSON.stringify(data, null, 4))
+
+        return data
+    }
+
+    static uncomplete(id) {
+        const data = JSON.parse(fs.readFileSync('./data.json'))
+
+        for (let i = 0; i < data.length; i++) {
+            if (data[i].id === id) {
+                data[i].completed = ''
+            }
+        }
+
+        fs.writeFileSync('./data.json', JSON.stringify(data, null, 4))
+
+        return data
+
     }
 
 }

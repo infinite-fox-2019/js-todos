@@ -20,7 +20,16 @@ class TodoController {
     static delete(id) {
         const data = Todo.deleteData(id)
         TodoView.displayDeleted(data)
-        
+    }
+
+    static complete(id) {
+        const data = Todo.complete(id)
+        TodoView.displayList(data)
+    }
+
+    static uncomplete(id) {
+        const data = Todo.uncomplete(id)
+        TodoView.displayList(data)
     }
 }
 

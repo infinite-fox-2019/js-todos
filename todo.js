@@ -27,7 +27,9 @@ switch(command) {
         TodoController.delete(parameter_number)
         break;
     case 'complete':
+        TodoController.complete(parameter_number)
         break;
     case 'uncomplete':
+            TodoController.uncomplete(parameter_number)
         break; 
 }
