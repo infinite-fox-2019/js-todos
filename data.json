@@ -24,9 +24,9 @@
     "id": 3,
     "task": "belajar",
     "status": [
-      "V"
+      " "
     ],
-    "time": "2019-09-11T09:39:50.061Z",
+    "time": "2019-09-11T10:16:12.648Z",
     "tagName": [
       "lifestyle",
       "hobby",
@@ -41,8 +41,37 @@
     ],
     "time": "2019-09-11T09:39:54.728Z",
     "tagName": [
-      "lifestyle",
+      "hobby",
+      "lifestyle"
+    ]
+  },
+  {
+    "id": 5,
+    "task": "bangun tidur",
+    "status": [
+      "X"
+    ],
+    "time": "2019-09-11T10:16:36.127Z",
+    "tagName": [
       "hobby"
     ]
+  },
+  {
+    "id": 6,
+    "task": "bangun tidur ahoy",
+    "status": [
+      " "
+    ],
+    "time": "2019-09-11T10:21:42.924Z",
+    "tagName": []
+  },
+  {
+    "id": 7,
+    "task": "bangun tidur juga",
+    "status": [
+      " "
+    ],
+    "time": "2019-09-11T10:55:48.474Z",
+    "tagName": []
   }
 ]

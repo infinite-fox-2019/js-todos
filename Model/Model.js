@@ -2,17 +2,17 @@ const fs = require('fs');
 const data =  JSON.parse(fs.readFileSync('./data.json',JSON,'utf8'));
 
 class Todo {
-    constructor (id,task,status,time) {
+    constructor (id,task,status,time,tagName) {
         this.id = id;
         this.task = task;
         this.status = status;
         this.time = time;
-        this.tagName = [];
+        this.tagName = tagName;
     }
     static list() {
         let toDoArr = [];
         for (let i = 0; i < data.length; i++) {
-            toDoArr.push(new Todo (data[i].id,data[i].task,data[i].status,data[i].time));
+            toDoArr.push(new Todo (data[i].id,data[i].task,data[i].status,data[i].time,data[i].tagName));
         }
         return toDoArr;
     }
