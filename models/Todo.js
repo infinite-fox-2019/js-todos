@@ -25,7 +25,17 @@ class Todo {
         return data.sort((a, b) => b.created_date < a.created_date)
       }
     } else if(type == 'completed') {
+      const todoComplete = []
 
+      data.forEach(d => d.isComplete ? todoComplete.push(d) : null)
+
+      if (sortBy == 'desc') {
+        return todoComplete.sort((a, b) => a.created_date < b.created_date)
+      } else {
+        return todoComplete.sort((a, b) => b.created_date < a.created_date)
+      }
+
+      return todoComplete
     }
 
     return data

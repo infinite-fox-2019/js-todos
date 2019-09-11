@@ -2,13 +2,13 @@
   {
     "id": 1,
     "todo": "test",
-    "isComplete": false,
+    "isComplete": true,
     "created_date": "Wed Sep 11 2019 15:04:57 GMT+0700 (Western Indonesia Time)"
   },
   {
     "id": 2,
     "todo": "test2",
-    "isComplete": false,
+    "isComplete": true,
     "created_date": "Wed Sep 11 2019 15:10:39 GMT+0700 (Western Indonesia Time)"
   },
   {
