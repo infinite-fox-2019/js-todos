@@ -1,12 +1,13 @@
 class ViewMessage {
     static showHelp() {
-        console.log("node todo.js help --> to view all the command lines");
-        console.log("node todo.js list --> to view all the to do list");
-        console.log("node todo.js add <task_content --> to add a new task");
-        console.log("node todo.js findById <task_id> --> to find task by its ID");
-        console.log("node todo.js delete <taks_id> --> to delete a task using its ID");
-        console.log("node todo.js complete <taks_id> --> to mark completed task");
-        console.log("node todo.js incomplete <taks_id> --> to mark incomplete task");
+        console.log(`
+        node todo.js help --> to view all the command lines \n
+        node todo.js list --> to view all the to do list \n
+        node todo.js add <task_content --> to add a new task \n
+        node todo.js findById <task_id> --> to find task by its ID \n
+        node todo.js delete <taks_id> --> to delete a task using its ID \n
+        node todo.js complete <taks_id> --> to mark completed task \n
+        node todo.js incomplete <taks_id> --> to mark incomplete task`);
     }
 
     static showAllTask(allTasks){
@@ -26,12 +27,34 @@ class ViewMessage {
     }
 
     static showCompletedTask(completedTask) {
-        console.log(completedTask);
+        for(let i = 0; i < completedTask.length; i++) {
+            if(completedTask[i].status === true) {
+                completedTask[i].status = '[x]';
+            } else {
+                completedTask[i].status = '[ ]';
+            }
+            console.log(`${completedTask[i].id} ${completedTask[i].status} ${completedTask[i].task}`);
+        }
     }
 
     static showIncompletedTask(incompletedTask) {
-        console.log(incompletedTask);
+        for(let i = 0; i < incompletedTask.length; i++) {
+            if(incompletedTask[i].status === false) {
+                incompletedTask[i].status = '[ ]';
+            } else {
+                incompletedTask[i].status = '[x]';
+            }
+            console.log(`${incompletedTask[i].id} ${incompletedTask[i].status} ${incompletedTask[i].task}`);
+        }
     }
+
+    static ascByDate(allTask) {
+        console.log(allTask)
+    }
+    static descByDate(allTask) {
+        console.log(allTask)
+    }
+
 }
 
 module.exports = ViewMessage;

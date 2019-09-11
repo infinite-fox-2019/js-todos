@@ -1,7 +1,8 @@
 const fs = require('fs');
 
 class ToDoList {
-    constructor(id, status, task) {
+    constructor(date, id, status, task) {
+        this.createdDate = date;
         this.id = id;
         this.status = status;
         this.task = task;
@@ -16,7 +17,7 @@ class ToDoList {
         const list = this.readTask();
         const listArr = [];
         for(let i = 0; i < list.length; i++) {
-            listArr.push(new ToDoList(list[i].id, list[i].status, list[i].task));
+            listArr.push(new ToDoList(list[i].createdDate, list[i].id, list[i].status, list[i].task));
         }
         return listArr;
     }
@@ -24,9 +25,10 @@ class ToDoList {
     static addTask(task) {
         const list = this.readTask();
         let id = list[list.length-1].id + 1;
-        const newTask = {id, task};
-        list.push(newTask)
-        const addedTask = new ToDoList(newTask.id, newTask.task);
+        let createdDate = new Date();
+        let status = false;
+        const addedTask = new ToDoList(createdDate, id, status, task);
+        list.push(addedTask);
         this.save(list);
         return addedTask;
     }
@@ -82,6 +84,34 @@ class ToDoList {
             }
         }
         this.save(allTasks);
+        return allTasks;
+    }
+
+    static asc() {
+        const allTasks = this.showAllTask();
+        for(let i = 0; i < allTasks.length; i++) {
+            for(let j = i + 1; j < allTasks.length; j++) {
+                if(allTasks[j].createdDate < allTasks[i].createdDate) {
+                    var temp = allTasks[i];
+                    allTasks[i] = allTasks[j];
+                    allTasks[j] = temp
+                }
+            }
+        }
+        return allTasks;
+    }
+
+    static desc() {
+        const allTasks = this.showAllTask();
+        for(let i = 0; i < allTasks.length; i++) {
+            for(let j = i + 1; j < allTasks.length; j++) {
+                if(allTasks[j].createdDate > allTasks[i].createdDate) {
+                    var temp = allTasks[i];
+                    allTasks[i] = allTasks[j];
+                    allTasks[j] = temp
+                }
+            }
+        }
         return allTasks;
     }
 }

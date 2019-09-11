@@ -35,6 +35,16 @@ class ToDoController {
         const incompletedTask = ToDoList.incompletedTaskById(id);
         ViewMessage.showIncompletedTask(incompletedTask);
     }
+
+    static ascByDate() {
+        const sortAsc = ToDoList.asc();
+        ViewMessage.ascByDate(sortAsc);
+    }
+
+    static descByDate() {
+        const sortDesc = ToDoList.desc();
+        ViewMessage.descByDate(sortDesc);
+    }
 }
 
 module.exports = ToDoController;

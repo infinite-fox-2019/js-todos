@@ -5,7 +5,7 @@ const Controller = require('./Controllers/toDoController')
 
 switch(command) {
     case "help":
-       Controller.showHelp();
+        Controller.showHelp();
         break;
     case "list":
         Controller.showAllTask();
@@ -25,7 +25,16 @@ switch(command) {
     case "incomplete":
         Controller.incompletedTask(input);
         break;
+    case "list:created":
+        if (argv[1] === 'asc'){
+            Controller.ascByDate();
+        } else if (argv[1] === 'desc') {
+            Controller.descByDate();
+        } else if (argv[1] === undefined) {
+            Controller.descByDate();
+        }
+        break;
     default:
         Controller.showHelp();
-        break;             
+        break;
 }
