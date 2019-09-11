@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": 1,
+    "todo": "Coding JS",
+    "isComplete": false,
+    "created_at": 1213123
+  },
+  {
+    "id": 2,
+    "todo": [
+      "Play Games"
+    ],
+    "isComplete": false,
+    "created_at": "2019-09-11T04:09:15.038Z"
+  },
+  {
+    "id": 3,
+    "todo": "Play Codewars",
+    "isComplete": false,
+    "created_at": "2019-09-11T04:11:20.329Z"
+  }
+]
