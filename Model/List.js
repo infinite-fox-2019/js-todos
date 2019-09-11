@@ -4,8 +4,8 @@ class List {
     constructor(id, todo) {
         this.id = id
         this.todo = todo
-
     }
+    
     static findAll() {
         const data = JSON.parse(fs.readFileSync('./data.json'))
         const data_arr = []
