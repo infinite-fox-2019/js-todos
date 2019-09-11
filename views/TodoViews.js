@@ -1,5 +1,8 @@
 class TodoViews {
   static list(data) {
+    const newData = data.map(d => {
+      return Date.parse(d.created_date)
+    })
     console.table(data)
   }
 

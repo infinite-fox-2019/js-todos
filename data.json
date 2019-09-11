@@ -1,20 +1,54 @@
 [
   {
     "id": 1,
-    "todo": "test",
+    "todo": "kevin",
     "isComplete": true,
-    "created_date": "Wed Sep 11 2019 15:04:57 GMT+0700 (Western Indonesia Time)"
+    "completed_date": "2019-09-11T09:55:38.065Z",
+    "tags": [
+      "code",
+      "js",
+      "react"
+    ],
+    "created_date": "2019-09-11T09:36:45.819Z"
   },
   {
     "id": 2,
-    "todo": "test2",
-    "isComplete": true,
-    "created_date": "Wed Sep 11 2019 15:10:39 GMT+0700 (Western Indonesia Time)"
+    "todo": "anantha",
+    "isComplete": false,
+    "completed_date": null,
+    "tags": [],
+    "created_date": "2019-09-11T09:36:49.136Z"
   },
   {
     "id": 3,
-    "todo": "test3",
+    "todo": "vijaya",
     "isComplete": false,
-    "created_date": "Wed Sep 11 2019 15:57:24 GMT+0700 (Western Indonesia Time)"
+    "completed_date": null,
+    "tags": [],
+    "created_date": "2019-09-11T09:36:54.406Z"
+  },
+  {
+    "id": 4,
+    "todo": "kesky",
+    "isComplete": true,
+    "completed_date": "2019-09-11T09:55:45.784Z",
+    "tags": [],
+    "created_date": "2019-09-11T09:36:58.284Z"
+  },
+  {
+    "id": 5,
+    "todo": "kimmy",
+    "isComplete": true,
+    "completed_date": "2019-09-11T09:55:48.546Z",
+    "tags": [],
+    "created_date": "2019-09-11T09:37:01.917Z"
+  },
+  {
+    "id": 6,
+    "todo": "kesky dan kimmy",
+    "isComplete": true,
+    "completed_date": "2019-09-11T09:55:05.520Z",
+    "tags": [],
+    "created_date": "2019-09-11T09:50:28.819Z"
   }
 ]

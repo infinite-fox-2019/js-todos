@@ -32,6 +32,10 @@ class TodoController {
     const data = Todo.uncomplete(id)
     TodoViews.uncomplete(data)
   }
+
+  static tag(id, tags) {
+    Todo.tag(id, tags)
+  }
 }
 
 module.exports = TodoController

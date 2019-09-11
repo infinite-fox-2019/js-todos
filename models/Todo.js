@@ -1,17 +1,19 @@
 const fs = require('fs')
 
 class Todo {
-  constructor(id, todo, isComplete, created_date) {
+  constructor(id, todo, isComplete, completed_date, tags, created_date) {
     this.id = id
     this.todo = todo
     this.isComplete = isComplete || false
-    this.created_date = created_date || Date()
+    this.completed_date = completed_date || null
+    this.tags = tags || []
+    this.created_date = created_date || new Date()
   }
 
   static findAll() {
     return JSON.parse(fs.readFileSync('./data.json')).map(data => {
-      const { id, todo, isComplete, created_date } = data
-      return new Todo(id, todo, isComplete, created_date)
+      const { id, todo, isComplete, completed_date, tags, created_date } = data
+      return new Todo(id, todo, isComplete, completed_date, tags, created_date)
     })
   }
 
@@ -24,15 +26,15 @@ class Todo {
       } else {
         return data.sort((a, b) => b.created_date < a.created_date)
       }
-    } else if(type == 'completed') {
+    } else if (type == 'completed') {
       const todoComplete = []
 
       data.forEach(d => d.isComplete ? todoComplete.push(d) : null)
 
       if (sortBy == 'desc') {
-        return todoComplete.sort((a, b) => a.created_date < b.created_date)
+        return todoComplete.sort((a, b) => a.completed_date < b.completed_date)
       } else {
-        return todoComplete.sort((a, b) => b.created_date < a.created_date)
+        return todoComplete.sort((a, b) => b.completed_date < a.completed_date)
       }
 
       return todoComplete
@@ -69,6 +71,7 @@ class Todo {
     data.forEach(d => {
       if (d.id == id) {
         d.isComplete = true
+        d.completed_date = new Date()
         newData.push(d)
       } else {
         newData.push(d)
@@ -94,6 +97,20 @@ class Todo {
 
     this.save(data)
     return data
+  }
+
+  static tag(id, tags) {
+    const data = this.findAll()
+
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].id == id) {
+        for (let j = 0; j < tags.length; j++) {
+          data[i].tags.push(tags[j])
+        }
+      }
+    }
+
+    this.save(data)
   }
 
   static save(data) {

@@ -1,12 +1,8 @@
-const command = process.argv[2].split(':')
+const command = process.argv[2] ? process.argv[2].split(':') : [undefined]
 const args = process.argv.slice(3)
 const TodoController = require('./controllers/TodoController')
 
-console.log('aaa', args[0])
 switch(command[0]) {
-  // case 'list':
-  //   TodoController.list()
-  //   break
   case 'list':
     TodoController.list(command[1], args[0])
     break
@@ -24,6 +20,9 @@ switch(command[0]) {
     break
   case 'uncomplete':
     TodoController.uncomplete(args[0])
+    break
+  case 'tag':
+    TodoController.tag(args[0], args.slice(1))
     break
   case 'help':
   case undefined:
