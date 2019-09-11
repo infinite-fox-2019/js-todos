@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "id": 1,
+    "task": "makan",
+    "complete": true,
+    "createdAt": "2019-09-11T16:26:29.455Z",
+    "tags": []
+  },
+  {
+    "id": 2,
+    "task": "belajar",
+    "complete": true,
+    "createdAt": "2019-09-11T16:26:29.455Z",
+    "tags": []
+  },
+  {
+    "id": 3,
+    "task": "mandi",
+    "complete": false,
+    "createdAt": "2019-09-11T16:26:29.455Z",
+    "tags": []
+  },
+  {
+    "id": 4,
+    "task": "tidur",
+    "complete": false,
+    "createdAt": "2019-09-11T16:26:29.455Z",
+    "tags": []
+  }
+]
