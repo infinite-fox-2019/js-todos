@@ -1,1 +1,39 @@
-[]
+[
+  {
+    "id": 1,
+    "activity": "makan",
+    "status": "[ ]",
+    "time": "2019-09-11T11:12:13.885Z",
+    "tagName": [
+      "food"
+    ]
+  },
+  {
+    "id": 2,
+    "activity": "main",
+    "status": "[V]",
+    "time": "2019-09-11T08:22:18.648Z",
+    "tagName": [
+      "life style"
+    ]
+  },
+  {
+    "id": 3,
+    "activity": "tidur",
+    "status": "[V]",
+    "time": "2019-09-11T08:22:24.767Z",
+    "tagName": [
+      "no life",
+      "gabut"
+    ]
+  },
+  {
+    "id": 4,
+    "activity": "coding",
+    "status": "[ ]",
+    "time": "2019-09-11T08:22:29.068Z",
+    "tagName": [
+      "hacktiv8"
+    ]
+  }
+]
