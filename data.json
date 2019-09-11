@@ -1,4 +1,38 @@
 [
-  {"task" : "main game"}
-  {"task" : "joget joget"}
+  {
+    "_id": 4,
+    "_completed": "[V]",
+    "_task": "tidur",
+    "_tag": []
+  },
+  {
+    "_id": 5,
+    "_completed": "[ ]",
+    "_task": "Makan bersama teman",
+    "_tag": []
+  },
+  {
+    "_id": 6,
+    "_completed": "[ ]",
+    "_task": "Makan bersama teman2",
+    "_tag": []
+  },
+  {
+    "_id": 7,
+    "_completed": "[ ]",
+    "_task": "Makan bersama teman2 besok",
+    "_tag": []
+  },
+  {
+    "_id": 8,
+    "_completed": "[ ]",
+    "_task": "Makan bersama keluarga",
+    "_tag": []
+  },
+  {
+    "_id": 9,
+    "_completed": "[X]",
+    "_task": "Makan selalu",
+    "_tag": []
+  }
 ]

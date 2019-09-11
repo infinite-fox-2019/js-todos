@@ -1,26 +1,26 @@
-const toDoControllers = require('./Controllers/toDoControllers.js')
+const ToDoControllers = require('./Controllers/toDoControllers.js');
 
 const command = process.argv[2];
 const arguments = process.argv.slice(3);
 
 switch(command){
   case 'list':
-    console.log('Ini daftar list');
+    ToDoControllers.viewAllList();
     break;
   case 'add':
-    console.log('data sudah ditambahkan');
+    ToDoControllers.addData(arguments[0]);
     break;
   case 'findById':
-    console.log('cari berdasarkan id');
+    ToDoControllers.findById(arguments[0]);
     break;
   case 'delete':
-    console.log('data di hapus');
+    ToDoControllers.deleteData(arguments[0]);
     break;
   case 'complete':
-    console.log('komplit');
+    ToDoControllers.dataComplete(arguments[0]);
     break;
   case 'uncomplete':
-    console.log('belum komplit');
+    ToDoControllers.dataUncomplete(arguments[0]);
     break;
   case 'help':
     console.log('$ node todo.js');
