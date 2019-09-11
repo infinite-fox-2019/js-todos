@@ -1,4 +1,4 @@
-const Model = require('../Models/Model')
+const Model = require('../Models/Task')
 
 class View {
   static help () {
@@ -12,6 +12,13 @@ class View {
     console.log(`$ node todo.js delete <task_id>`)
     console.log(`$ node todo.js complete <task_id>`)
     console.log(`$ node todo.js uncomplete <task_id>`)
+    console.log(`===================`)
+    console.log(`Feature in Progress`);
+    console.log(`===================`)
+    console.log(`$ node todo.js list:created asc|desc`)
+    console.log(`$ node todo.js list:completed asc|desc`)
+    console.log(`$ node todo.js tag <task_id> <tag_name_1> <tag_name_2> ... <tag_name_N>`)
+    console.log(`$ node todo.js filter <tag_name>`)
   }
   static list() {
     console.log("To-Do List");
@@ -20,7 +27,7 @@ class View {
     for (let i = 0; i < list.length; i++) {
       let str = ''
       str += list[i].id + '. '
-      if (list[i].completed) {
+      if (list[i].completed == true) {
         str += '[x]'
       }
       else {

@@ -29,4 +29,17 @@ switch (command) {
   case 'uncomplete':
     Controller.uncomplete(parameters)
     break
+  case 'list:created':
+    Controller.listSortByCreated(parameters[0])
+    break
+  case 'list:completed':
+    // 
+    break
+  case 'tag':
+    // 
+    break
+  case 'filter':
+    // 
+    break
+  
 }

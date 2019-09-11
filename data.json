@@ -1,22 +1,26 @@
 [
   {
     "id": 1,
-    "task": "Bikin aplikasi",
-    "completed": false
+    "task": "Yah mesti ngulang lagi",
+    "completed": false,
+    "date": 1568191766372
   },
   {
     "id": 2,
-    "task": "Main node js",
-    "completed": false
-  },
-  {
-    "id": 3,
-    "task": "Shut down my computer",
-    "completed": false
+    "task": "Pastiin semua parameter masuk",
+    "completed": true,
+    "date": 1568191766372
   },
   {
     "id": 4,
-    "task": "Kerjain tugas",
-    "completed": false
+    "task": "Ayo rombak lagi",
+    "completed": false,
+    "date": 1568192588241
+  },
+  {
+    "id": 6,
+    "task": "Cek lagi",
+    "completed": false,
+    "date": 1568191996754
   }
 ]

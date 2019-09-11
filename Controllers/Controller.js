@@ -1,5 +1,5 @@
 const View = require('../Views/View')
-const Model = require('../Models/Model')
+const Model = require('../Models/Task')
 
 class Controller {
   static help() {
@@ -25,6 +25,10 @@ class Controller {
   static uncomplete(parameters) {
     Model.uncomplete(parameters)
     View.list()
+  }
+  static listCreated(parameter) {
+    Model.listSortByCreated(parameter)
+    // View.list()
   }
 }
 
