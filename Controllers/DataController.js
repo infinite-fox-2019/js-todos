@@ -1,4 +1,4 @@
-const DataModel = require('../Models/DataModel')
+const DataModel = require('../Models/DataTodo')
 const DataView = require('../Views/DataView')
 
 class DataController {
@@ -6,16 +6,20 @@ class DataController {
         DataView.help()
     }
     static list() {
-
+        let listFromModel = DataModel.list()
+        DataView.list(listFromModel)
     }
-    static add() {
-
+    static add(contents) {
+        let arrOfTasks = DataModel.add(contents)
+        DataView.add(arrOfTasks)
     }
-    static findById() {
-
+    static findById(id) {
+        let taskIdFound = DataModel.findById(id)
+        DataView.findById(taskIdFound)
     }
-    static delete() {
-
+    static delete(id) {
+        let deleteId = DataModel.delete(id)
+        DataView.delete(deleteId)
     }
     static complete() {
 

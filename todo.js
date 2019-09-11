@@ -7,21 +7,21 @@ switch (command) {
         DataController.help()
         break;
     case "list" :
-        DataController.showList()
+        DataController.list()
         break;
     case "add" :
-        DataController.addTask()
+        DataController.add(parameter[0])
         break;
     case "findById" :
-        DataController.findById()
+        DataController.findById(parameter[0])
         break;
     case "delete" :
-        DataController.delete()
+        DataController.delete(parameter[0])
         break;
     case "complete" :
-        DataController.complete()
+        DataController.complete(parameter)
         break;
     case "uncomplete" :
-        DataController.uncomplete()
+        DataController.uncomplete(parameter)
         break;
 }
