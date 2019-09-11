@@ -8,19 +8,22 @@ switch(command) {
         TodoController.getList();
     break;
     case 'add':
-        TodoController.addTodo(parameters[0]);
+        TodoController.add(parameters[0]);
     break;
     case 'findById':
-        TodoController.getTodoById(Number(parameters[0]));
+        TodoController.getById(Number(parameters[0]));
     break;
     case 'delete':
-        TodoController.deleteTodoById(Number(parameters[0]));
+        TodoController.deleteById(Number(parameters[0]));
     break;
     case 'complete':
-        TodoController.completeTodoById(Number(parameters[0]));
+        TodoController.completeById(Number(parameters[0]), true);
     break;
     case 'uncomplete':
-        TodoController.uncompleteTodoById(Number(parameters[0]));
+        TodoController.completeById(Number(parameters[0]), false);
+    break;
+    case 'list:created':
+        TodoController.getListSort(Number(parameters[0]), 'created');
     break;
     default:
         console.log('node todo.js');

@@ -7,28 +7,33 @@ class TodoController {
         TodoView.showList(todos);
     }
 
-    static addTodo(task) {
-        Todo.addTodo(task);
+    static add(task) {
+        Todo.add(task);
         TodoView.showAddMessage(task);
     }
 
-    static getTodoById(id) {
-        let theTodo = Todo.getTodoById(id);
+    static getById(id) {
+        let theTodo = Todo.getById(id);
         TodoView.showTodo(theTodo);
     }
 
-    static deleteTodoById(id) {
-        let theTask = Todo.deleteTodoById(id);
+    static deleteById(id) {
+        let theTask = Todo.deleteById(id);
         TodoView.showDeleteMessage(theTask);
     }
 
-    static completeTodoById(id) {
-        let todos = Todo.completeTodoById(id);
+    static completeById(id, isComplete) {
+        let todos = Todo.completeById(id, isComplete);
         TodoView.showList(todos);
     }
 
     static uncompleteTodoById(id) {
         let todos = Todo.uncompleteTodoById(id);
+        TodoView.showList(todos);
+    }
+
+    static getListSortByCreated() {
+        let todos = Todo.getListSortByCreated();
         TodoView.showList(todos);
     }
 }

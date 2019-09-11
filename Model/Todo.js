@@ -1,25 +1,48 @@
 const fs = require('fs');
 
 class Todo {
+    constructor(todo) {
+        this.id = todo.id;
+        this.task = todo.task;
+        this.isComplete = todo.isComplete;
+        this.createdDate = todo.createdDate;
+        this.tag = todo.tag;
+    }
+
     static getList() {
-        let todos = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
+        let todoData = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
+        let todos = [];
+        for(let i = 0; i < todoData.length; i++) {
+            todos.push(new Todo({
+                id: todoData[i].id,
+                task: todoData[i].task,
+                isComplete: todoData[i].isComplete,
+                createdDate: todoData[i].createdDate,
+                tag: todoData[i].tag
+            }));
+        }
         return todos;
     }
 
-    static addTodo(task) {
-        let todos = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
-        let lastId = todos[todos.length - 1].id + 1;
-        let newTodo = {
-            id: lastId,
-            task: task
+    static add(task) {
+        let todos = this.getList()
+        let lastId = 1
+        if(todos.length !== 0){
+            lastId = todos[todos.length - 1].id + 1;
         }
 
-        todos.push(newTodo);
+        todos.push(new Todo({
+            id: lastId,
+            task: task,
+            isComplete: false,
+            createdDate: new Date(),
+            tag: []
+        }));
         fs.writeFileSync('./data.json', JSON.stringify(todos, 0, 2));
     }
 
-    static getTodoById(id) {
-        let todos = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
+    static getById(id) {
+        let todos = this.getList();
         for(let i = 0; i < todos.length; i++) {
             if(todos[i].id === id) {
                 return todos[i];
@@ -29,9 +52,9 @@ class Todo {
         return undefined;
     }
 
-    static deleteTodoById(id) {
-        let todos = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
-        let theTask = '';
+    static deleteById(id) {
+        let todos = this.getList();
+        let theTask;
         let theIndex = -1;
         for(let i = 0; i < todos.length; i++) {
             if(todos[i].id === id) {
@@ -43,17 +66,15 @@ class Todo {
         if(theIndex >= 0) {
             todos.splice(theIndex, 1);
             fs.writeFileSync('./data.json', JSON.stringify(todos, 0, 2));
-            return theTask;
-        } else {
-            return undefined;
         }
+        return theTask;
     }
 
-    static completeTodoById(id) {
-        let todos = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
+    static completeById(id, isComplete) {
+        let todos = this.getList();
         for(let i = 0; i < todos.length; i++) {
             if(todos[i].id === id) {
-                todos[i].complete = true;
+                todos[i].isComplete = isComplete;
             }
         }
 
@@ -62,17 +83,28 @@ class Todo {
         return this.getList();
     }
 
-    static uncompleteTodoById(id) {
+    // static uncompleteTodoById(id) {
+    //     let todos = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
+    //     for(let i = 0; i < todos.length; i++) {
+    //         if(todos[i].id === id) {
+    //             todos[i].complete = false;
+    //         }
+    //     }
+
+    //     fs.writeFileSync('./data.json', JSON.stringify(todos, 0, 2));
+
+    //     return this.getList();
+    // }
+
+    static getListSortByCreated() {
         let todos = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
+        let result = [];
+        let sorted = false;
+
         for(let i = 0; i < todos.length; i++) {
-            if(todos[i].id === id) {
-                todos[i].complete = false;
-            }
+            
         }
-
-        fs.writeFileSync('./data.json', JSON.stringify(todos, 0, 2));
-
-        return this.getList();
+        return todos;
     }
 }
 
