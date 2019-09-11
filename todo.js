@@ -1,10 +1,11 @@
+const TodoController = require('./Controller/TodoController');
 
 let command = process.argv[2];
 let parameters = process.argv.slice(3);
 
 switch(command) {
     case 'list':
-        console.log('this is list');
+        TodoController.getList();
     break;
     default:
         console.log('node todo.js');
