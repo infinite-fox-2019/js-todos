@@ -2,11 +2,32 @@
   {
     "id": 1,
     "status": " ",
-    "task": "belajar"
+    "task": "belajar",
+    "created": "2019-09-11T09:31:52.887Z",
+    "completedDate": null,
+    "tag": []
   },
   {
     "id": 2,
     "status": " ",
-    "task": "baca novel"
+    "task": "membaca",
+    "created": "2019-09-11T09:31:55.812Z",
+    "completedDate": null,
+    "tag": [
+      "hobby",
+      "lifestyle"
+    ]
+  },
+  {
+    "id": 3,
+    "status": " ",
+    "task": "coding",
+    "created": "2019-09-11T09:59:45.453Z",
+    "completedDate": null,
+    "tag": [
+      "hobby",
+      "lifestyle",
+      "exercise"
+    ]
   }
 ]

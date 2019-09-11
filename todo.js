@@ -1,25 +1,25 @@
-const command = process.argv[2];
+const command = process.argv[2] === undefined ? '' : process.argv[2].split(':');
+const subCommand = command[1];
+const commandTodo = command[0];
+
 const parameters = process.argv.slice(3);
 const Controllers = require('./Controllers/TodoController')
 
-switch (command) {
+switch (commandTodo) {
     case 'help':
-        console.log('usage:');
-        console.log('');
-        console.log('node todo.js help  # menampilkan command apa saja yang tersedia');
-        console.log('node todo.js list  # melihat daftar TODO');
-        console.log('node todo.js add <task_content>  # menambahkan TODO ke dalam list');
-        console.log('node todo.js findById <task_id>  # melihat detail TODO sesuai `task_id`');
-        console.log('node todo.js delete <task_id>  # menghapus TODO sesuai `task_id` nya');
-        console.log('node todo.js complete <task_id>  # menandai status TODO selesai');
-        console.log('node todo.js uncomplete <task_id>  # menandai status TODO belum selesai');
-        console.log('');
+        Controllers.help();
         break;
     case 'list':
-        Controllers.list();
+        Controllers.list(subCommand, parameters[0]);
         break;
     case 'add':
         Controllers.add(parameters[0]);
+        break;
+    case 'tag':
+        Controllers.tag(Number(parameters[0]), parameters.slice(1));
+        break;
+    case 'filter':
+        Controllers.filter(subCommand);
         break;
     case 'findById':
         Controllers.findById(Number(parameters[0]));
@@ -34,15 +34,6 @@ switch (command) {
         Controllers.uncomplete(Number(parameters[0]));
         break;
     default:
-        console.log('usage:');
-        console.log('');
-        console.log('node todo.js help  # menampilkan command apa saja yang tersedia');
-        console.log('node todo.js list  # melihat daftar TODO');
-        console.log('node todo.js add <task_content>  # menambahkan TODO ke dalam list');
-        console.log('node todo.js findById <task_id>  # melihat detail TODO sesuai `task_id`');
-        console.log('node todo.js delete <task_id>  # menghapus TODO sesuai `task_id` nya');
-        console.log('node todo.js complete <task_id>  # menandai status TODO selesai');
-        console.log('node todo.js uncomplete <task_id>  # menandai status TODO belum selesai');
-        console.log('');
+        Controllers.help();
         break;
 }
