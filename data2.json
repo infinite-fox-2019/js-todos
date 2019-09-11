@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "task": "Bikin aplikasi",
+    "hasCompleted": false,
+    "createdDate": "2019-09-10T09:23:08.083Z"
+  },
+  {
+    "id": 2,
+    "task": "Main Node.js",
+    "hasCompleted": true,
+    "createdDate": "2019-09-13T13:16:17.364Z"
+  },
+  {
+    "id": 4,
+    "task": "Shut down my computer",
+    "hasCompleted": false,
+    "createdDate": "2019-09-13T13:16:17.364Z"
+  },
+  {
+    "id": 7,
+    "task": "Ketawa gak jelas",
+    "hasCompleted": true,
+    "createdDate": "2019-09-13T13:16:17.364Z"
+  },
+  {
+    "id": 8,
+    "task": "Koprol 3x",
+    "hasCompleted": false,
+    "createdDate": "2019-09-13T13:16:17.364Z"
+  },
+  {
+    "id": 9,
+    "task": "Lompat Harimau",
+    "hasCompleted": true,
+    "createdDate": "2019-09-13T13:16:17.364Z"
+  },
+  {
+    "id": 10,
+    "task": "Menghitung jumlah bintang",
+    "hasCompleted": true,
+    "createdDate": "2019-09-10T09:31:04.978Z"
+  },
+  {
+    "id": 11,
+    "task": "Main koala-koalaan",
+    "hasCompleted": false,
+    "createdDate": "2019-09-10T09:47:48.462Z"
+  },
+  {
+    "id": 12,
+    "task": "Main jadi penguin",
+    "hasCompleted": true,
+    "createdDate": "2019-09-10T10:41:43.037Z"
+  },
+  {
+    "id": 13,
+    "task": "pergi ke planet astornus",
+    "hasCompleted": false,
+    "createdDate": "2019-09-10T11:27:10.421Z"
+  },
+  {
+    "id": 14,
+    "task": "main layangan",
+    "hasCompleted": false,
+    "createdDate": "2019-09-11T04:42:00.552Z"
+  },
+  {
+    "id": 15,
+    "task": "lari marathon",
+    "hasCompleted": false,
+    "createdDate": "2019-09-11T06:15:35.138Z"
+  },
+  {
+    "id": 16,
+    "task": "panjat pinang",
+    "hasCompleted": false,
+    "createdDate": "2019-09-11T06:24:00.180Z"
+  },
+  {
+    "id": 17,
+    "task": "molor",
+    "hasCompleted": false,
+    "createdDate": "2019-09-11T06:25:52.983Z"
+  }
+]
