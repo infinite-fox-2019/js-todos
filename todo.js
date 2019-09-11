@@ -1,8 +1,9 @@
 const command = process.argv[2]
-const parameters_1 = process.argv[3]
-const parameters_2 = process.argv[4]
+const parameter = process.argv[3]
+const parameter_number = Number(process.argv[3])
 const ListController = require('./Controller/ListController')
 const AddController = require('./Controller/AddController')
+const FindByIdController = require('./Controller/FindByIdController')
 
 switch(command) {
     case 'help':
@@ -19,9 +20,10 @@ switch(command) {
         ListController.findAll()
         break;
     case 'add':
-        AddController.addData(parameters_1)
+        AddController.addData(parameter)
         break;
     case 'findById':
+        FindByIdController.findData(parameter_number)
         break;
     case 'delete':
         break;

@@ -1,7 +1,6 @@
 const fs = require('fs')
 const List = require('../Model/List')
 
-
 class Add {
     constructor(id, todo) {
         this.id = id
