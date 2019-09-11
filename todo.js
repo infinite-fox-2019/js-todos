@@ -13,19 +13,19 @@ switch (commandTodo) {
         Controllers.list(subCommand, parameters[0]);
         break;
     case 'add':
-        Controllers.add(parameters[0]);
+        Controllers.addTask(parameters[0]);
         break;
     case 'tag':
         Controllers.tag(Number(parameters[0]), parameters.slice(1));
         break;
     case 'filter':
-        Controllers.filter(subCommand);
+        Controllers.filterTask(subCommand);
         break;
     case 'findById':
         Controllers.findById(Number(parameters[0]));
         break;
     case 'delete':
-        Controllers.delete(Number(parameters[0]));
+        Controllers.deleteTask(Number(parameters[0]));
         break;
     case 'complete':
         Controllers.complete(Number(parameters[0]));

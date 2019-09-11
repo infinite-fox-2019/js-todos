@@ -103,23 +103,17 @@ class Todo {
         this.save(listTodo);
         return task;
     }
-    static completeTask(id) {
+    static completeTask(id, key) {
         const listTodo = this.list();
         for (let i = 0; i < listTodo.length; i++) {
             if (listTodo[i].id === id) {
-                listTodo[i].status = "x";
-                listTodo[i].completedDate = new Date;
-            }
-        }
-        this.save(listTodo);
-        return listTodo;
-    }
-    static uncompleteTask(id) {
-        const listTodo = this.list();
-        for (let i = 0; i < listTodo.length; i++) {
-            if (listTodo[i].id === id) {
-                listTodo[i].status = " ";
-                listTodo[i].completedDate = null;
+                if (key === 'complete') {
+                    listTodo[i].status = "x";
+                    listTodo[i].completedDate = new Date;
+                } else if (key === 'uncomplete') {
+                    listTodo[i].status = " ";
+                    listTodo[i].completedDate = null;
+                }
             }
         }
         this.save(listTodo);

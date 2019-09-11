@@ -9,7 +9,7 @@ class Controllers {
         const listTodo = TodoModels.list(listBy, type);
         TodoViews.viewList(listTodo);
     }
-    static add (task) {
+    static addTask (task) {
         TodoModels.add(task);
         TodoViews.viewAddedTask(task);
     }
@@ -17,7 +17,7 @@ class Controllers {
         const addedTagTask = TodoModels.addTag(id, arrayTag);
         TodoViews.viewAddedTag(addedTagTask, arrayTag);
     }
-    static filter (tag) {
+    static filterTask (tag) {
         const tagTask = TodoModels.filter(tag);
         TodoViews.viewFilter(tagTask);
     }
@@ -25,16 +25,16 @@ class Controllers {
         const todoId = TodoModels.findById(id);
         TodoViews.viewById(todoId);
     }
-    static delete (id) {
+    static deleteTask (id) {
         const deletedTask = TodoModels.deleteTask(id);
         TodoViews.viewDeleteTask(deletedTask);
     }
     static complete (id) {
-        const listTodo = TodoModels.completeTask(id);
+        const listTodo = TodoModels.completeTask(id, 'complete');
         TodoViews.viewList(listTodo);
     }
     static uncomplete (id) {
-        const listTodo = TodoModels.uncompleteTask(id);
+        const listTodo = TodoModels.completeTask(id, 'uncomplete');
         TodoViews.viewList(listTodo);
     }
 }
