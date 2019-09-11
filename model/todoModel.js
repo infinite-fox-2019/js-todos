@@ -87,7 +87,7 @@ class Todo{
         const data = this.getTodo()
         let newData = data.filter(data => data.status === true)
         if(arg.toLowerCase() === 'asc') newData = newData.sort( (a,b) => new Date(a.completed_date) - new Date(b.completed_date))
-        else newData = newData.sort( (a,b) => new Date(b.completed_date) - new Date(a.created_date))
+        else newData = newData.sort( (a,b) => new Date(b.completed_date) - new Date(a.completed_date))
         return newData
     }
 
