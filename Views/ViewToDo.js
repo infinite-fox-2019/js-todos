@@ -98,7 +98,7 @@ class ViewToDo{
             console.log(`${toDo[i].id}. ${status} ${toDo[i].task}. Tagsnya: ${toDo[i].tags}. Tanggal Pembuatan: ${toDo[i].date} \n`);
         }
     }
-    static searchFilter(toDo){
+    static searchFilterASC(toDo){
         for(let i = 0; i<toDo.length; i++){
             let status = '';
             if(toDo[i].status == true){
@@ -110,6 +110,19 @@ class ViewToDo{
             console.log(`${toDo[i].id}. ${status} ${toDo[i].task}. Tagsnya: ${toDo[i].tags}. Tanggal Pembuatan: ${toDo[i].date} \n`);
         }
     }
+
+    // static searchFilterDESC(toDo){
+    //     for(let i = 0; i<toDo.length; i++){
+    //         let status = '';
+    //         if(toDo[i].status == true){
+    //             status = '[X]'
+    //         }
+    //         else{
+    //             status = '[ ]'
+    //         }
+    //         console.log(`${toDo[i].id}. ${status} ${toDo[i].task}. Tagsnya: ${toDo[i].tags}. Tanggal Pembuatan: ${toDo[i].date} \n`);
+    //     }
+    // }
 }
 
 module.exports = ViewToDo;

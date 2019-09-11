@@ -3,12 +3,10 @@ const Controller = require('./Controllers/ToDoController')
 let command = process.argv[2];
 let task = process.argv.slice(3);
 if(command.split(':')[0] == 'filter'){
-    task = command.split(':')[1];
+    task.push(task[0]);
+    task[0] = command.split(':')[1];
     command = 'filter';
 }
-
-
-
 
 switch(command){
     case 'list':
@@ -57,7 +55,7 @@ switch(command){
         Controller.addTags(task[0], task.slice(1))
         break;
     case 'filter':
-        Controller.searchFilter(task)
+        Controller.searchFilterASC(task)
         break;
     case 'help':
         console.log('all - untuk menampilkan semua todo list');

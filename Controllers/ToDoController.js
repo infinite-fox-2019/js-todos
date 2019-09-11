@@ -55,10 +55,18 @@ class ToDoController{
         const addTags = ToDo.addTags(id, tags);
         ViewToDo.addTags(addTags);
     }
-    static searchFilter(tag){
-        const searchFilter = ToDo.searchFilter(tag);
-        ViewToDo.searchFilter(searchFilter)
+    // static searchFilter(tag){
+    //     const searchFilter = ToDo.searchFilter(tag);
+    //     ViewToDo.searchFilter(searchFilter)
+    // }
+    static searchFilterASC(tag){
+        const searchFilterASC = ToDo.searchFilterASC(tag);
+        ViewToDo.searchFilterASC(searchFilterASC)
     }
+    // static searchFilterDESC(tag){
+    //     const searchFilterDESC = ToDo.searchFilterDESC(tag);
+    //     ViewToDo.searchFilterDESC(searchFilterDESC)
+    // }
 }
 
 module.exports = ToDoController;

@@ -107,7 +107,7 @@ class ToDo {
         for(let i = 0; i<tasks.length; i++){
             if(tasks[i].id == id){
                 tasks[i].status = false;
-                task[i].comp_date = null;
+                tasks[i].comp_date = null;
                 isDone = true;
             }
         }
@@ -283,7 +283,7 @@ class ToDo {
         return tasks[index]
     }
 
-    static searchFilter(tag){
+    static searchFilterASC(tag){
         const tasks = this.viewAll();
         let filtered = [];
 
@@ -295,8 +295,45 @@ class ToDo {
                 }
             }
         }
+
+        for(let i = 0; i<filtered.length; i++){
+            for(let j = i+1; j<filtered.length; j++){
+                if(filtered[i].date > filtered[j].date){
+                    let sementara = filtered[i];
+                    filtered[i] = filtered[j];
+                    filtered[j] = sementara;
+                }
+            }
+        }
+
         return filtered;
     }
+
+    // static searchFilterDESC(tag){
+    //     const tasks = this.viewAll();
+    //     let filtered = [];
+
+    //     for(let i = 0; i<tasks.length; i++){
+    //         for(let j = 0; j<tasks[i].tags.length; j++){
+    //             if(tasks[i].tags[j] == tag){
+    //                 filtered.push(tasks[i])
+    //                 break;
+    //             }
+    //         }
+    //     }
+
+    //     for(let i = 0; i<filtered.length; i++){
+    //         for(let j = i+1; j<filtered.length; j++){
+    //             if(filtered[i].date < filtered[j].date){
+    //                 let sementara = filtered[i];
+    //                 filtered[i] = filtered[j];
+    //                 filtered[j] = sementara;
+    //             }
+    //         }
+    //     }
+
+    //     return filtered;
+    // }
 
     static save(ToDoData){
         fs.writeFileSync(dataLocation, JSON.stringify(ToDoData, null, 2))
