@@ -1,1 +1,35 @@
-[]
+[
+  {
+    "_id": 1,
+    "_completed": true,
+    "_task": "Menatap komputer",
+    "_tag": [],
+    "_createDate": "2019-09-11T10:09:52.104Z",
+    "_completedDate": "2019-09-11T10:10:43.844Z"
+  },
+  {
+    "_id": 2,
+    "_completed": true,
+    "_task": "Menatap nasib",
+    "_tag": [
+      "alam",
+      "psikologi",
+      "dunia",
+      "fana"
+    ],
+    "_createDate": "2019-09-11T10:10:04.372Z",
+    "_completedDate": "2019-09-11T10:10:47.381Z"
+  },
+  {
+    "_id": 3,
+    "_completed": false,
+    "_task": "Menatapi indahnya dunia",
+    "_tag": [
+      "pemandangan",
+      "alam",
+      "alami"
+    ],
+    "_createDate": "2019-09-11T10:10:13.654Z",
+    "_completedDate": null
+  }
+]
