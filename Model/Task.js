@@ -7,6 +7,11 @@ class Task {
         this.status = status;
         this.date = new Date(date).toISOString();
         this.update = update;
+        this.tag = [];
+    }
+
+    static save(param){
+        fs.writeFileSync("./data.json" , JSON.stringify(param, null, 2));
     }
 
     static listKegiatan(){
@@ -16,7 +21,7 @@ class Task {
         for (let i = 0; i < bacaData.length; i++){
             arrKegiatan.push(new Task(bacaData[i].id, bacaData[i].kegiatan, bacaData[i].date,bacaData[i].status,bacaData[i].update));
         }
-        fs.writeFileSync("./data.json" , JSON.stringify(arrKegiatan, null, 2));
+        Task.save(arrKegiatan);
         return arrKegiatan;
     }
 
@@ -30,7 +35,7 @@ class Task {
         }
         
         addKegiatan.push(new Task(id, kegiatan, new Date,false, null));
-        fs.writeFileSync("./data.json" , JSON.stringify(addKegiatan, null, 2));
+        Task.save(addKegiatan);
     }
 
     static findById (num){
@@ -49,7 +54,7 @@ class Task {
                 deleteKegiatan.splice(i,1);
             }
         }
-        fs.writeFileSync("./data.json" , JSON.stringify(deleteKegiatan, null, 2));
+        Task.save(deleteKegiatan);
     }
 
     static complete(num){
@@ -60,7 +65,7 @@ class Task {
                 completeKegiatan[i].update = new Date().toISOString();
             }
         }
-        fs.writeFileSync("./data.json" , JSON.stringify(completeKegiatan, null, 2));
+        Task.save(completeKegiatan);
         return completeKegiatan;
     }
 
@@ -72,7 +77,7 @@ class Task {
                 unCompleteKegiatan[i].update = null;
             }
         }
-        fs.writeFileSync("./data.json" , JSON.stringify(unCompleteKegiatan, null, 2));
+        Task.save(unCompleteKegiatan);
         return unCompleteKegiatan;
     }
 
@@ -136,6 +141,19 @@ class Task {
             }
         }
         return arrComplete;
+    }
+
+    static tag(num,arr){
+        let tagId = Task.listKegiatan();
+        for(let i = 0; i < tagId.length; i++){
+            if (tagId[i].id == num){
+                for(let j = 0; j < arr.length; j++){
+                    tagId[i].tag.push(arr[j]);
+                }
+            }
+        }
+        Task.save(tagId);
+        return tagId;
     }
 }
 // Task.addKegiatan("tidur");

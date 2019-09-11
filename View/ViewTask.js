@@ -54,5 +54,14 @@ class ViewTask {
             console.log(`${arrlist[i].id}. [${tanda}] ${arrlist[i].kegiatan} update at ${arrlist[i].update}`);
         }
     }
+
+    static tag(num,arr){
+        let arrList = arr;
+        for (let i = 0; i < arrList.length; i++ ){
+            if(arrList[i].id == num){
+                console.log(`Tagged task "${arr[i].kegiatan}" with tags: ${arr[i].tag}`);
+            }
+        }
+    }
 }
 module.exports = ViewTask;

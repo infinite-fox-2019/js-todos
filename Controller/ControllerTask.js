@@ -40,6 +40,11 @@ class ControllerTask {
         let arrList = model.listCompleted(str);
         return view.listCompleted(arrList);
     }
+
+    static tag (num,arr){
+        let arrList = model.tag(num,arr);
+        return view.tag(num,arrList);
+    }
 }
 
 // ControllerTask.findByID(2);
