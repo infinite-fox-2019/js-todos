@@ -1,6 +1,10 @@
 class AlertViews {
-  static successMessage(value) {
-    console.log(`${value} added successfully.`)
+  static successMessageAdd(value) {
+    console.log(`${value} successfully added.`)
+  }
+
+  static successMessageDelete(id) {
+    console.log(`Todo with id ${id} successfully deleted.`)
   }
 }
 

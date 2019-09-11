@@ -30,10 +30,12 @@ class Todo {
   }
 
   static findById(id) {
-    const data = this.findAll()
+    return this.findAll().filter(d => d.id == id)
+  }
 
-    // return data
-    return data.filter(d => d.id == id)
+  static delete(id) {
+    const newData = this.findAll().filter(d => d.id != id)
+    this.save(newData)
   }
 
   static save(data) {

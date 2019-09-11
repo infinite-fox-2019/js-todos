@@ -10,12 +10,17 @@ class TodoController {
 
   static add(todo) {
     Todo.add(todo)
-    AlertViews.successMessage(todo)
+    AlertViews.successMessageAdd(todo)
   }
 
   static findById(id) {
     const data = Todo.findById(id)
     TodoViews.findById(data)
+  }
+
+  static delete(id) {
+    Todo.delete(id)
+    AlertViews.successMessageDelete(id)
   }
 }
 
