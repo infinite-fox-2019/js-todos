@@ -19,7 +19,7 @@ switch(command) {
         ListController.findAll()
         break;
     case 'add':
-        AddController.addData(parameters_1, parameters_2)
+        AddController.addData(parameters_1)
         break;
     case 'findById':
         break;
