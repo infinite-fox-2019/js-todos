@@ -5,6 +5,7 @@ class Task {
         this.name = name
         this.id = id
         this.completed = ' '
+        this.tags = []
         this.timeCreated = new Date()
     }
 
@@ -15,7 +16,11 @@ class Task {
 
     static addTask(name) {
         const data = this.fileParsed()
-        data.push(new Task(name, data[data.length - 1].id + 1))
+        if (!data[data.length - 1]) {
+            data.push(new Task(name, 1))
+        } else {
+            data.push(new Task(name, data[data.length - 1].id + 1))
+        }
         this.save(data)
     }
 

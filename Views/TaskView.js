@@ -10,7 +10,7 @@ class TaskView {
     }
 
     static displayAList(object) {
-        console.log(`${object.id}. ${object.name}`)
+        console.log(`${object.id}. [${object.completed}] ${object.name}`)
     }
 
     static delete(name) {
