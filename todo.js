@@ -1,9 +1,7 @@
 const command = process.argv[2]
 const parameter = process.argv[3]
 const parameter_number = Number(process.argv[3])
-const ListController = require('./Controller/ListController')
-const AddController = require('./Controller/AddController')
-const FindByIdController = require('./Controller/FindByIdController')
+const TodoController = require('./Controller/TodoController')
 
 switch(command) {
     case 'help':
@@ -17,15 +15,16 @@ switch(command) {
         console.log('$ node todo.js uncomplete <task_id>')
         break;
     case 'list':
-        ListController.findAll()
+        TodoController.list()
         break;
     case 'add':
-        AddController.addData(parameter)
+        TodoController.add(parameter)
         break;
     case 'findById':
-        FindByIdController.findData(parameter_number)
+        TodoController.findById(parameter_number)
         break;
     case 'delete':
+        TodoController.delete(parameter_number)
         break;
     case 'complete':
         break;
