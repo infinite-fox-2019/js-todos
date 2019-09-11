@@ -24,6 +24,14 @@ class DataView {
     static delete(deletedTask) {
         console.log(`Deleted ${deletedTask.task} from your TODO list...`)
     }
+    static complete(arrOfTask) {
+        for (let i=0; i<arrOfTask.length; i++) {
+            console.log(`${arrOfTask[i].id}. [${arrOfTask[i].status}] ${arrOfTask[i].task}`);
+        }
+    }
+    static uncompleted(id) {
+        
+    }
 }
 
 module.exports = DataView

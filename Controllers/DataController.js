@@ -21,11 +21,13 @@ class DataController {
         let deleteId = DataModel.delete(id)
         DataView.delete(deleteId)
     }
-    static complete() {
-
+    static complete(id) {
+        let completedTask = DataModel.complete(id)
+        DataView.complete(completedTask)
     }
-    static uncomplete() {
-
+    static uncomplete(id) {
+        let uncompletedTask = DataModel.uncomplete(id)
+        DataView.complete(uncompletedTask)
     }
 }
 

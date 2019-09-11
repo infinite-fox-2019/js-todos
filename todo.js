@@ -19,7 +19,7 @@ switch (command) {
         DataController.delete(parameter[0])
         break;
     case "complete" :
-        DataController.complete(parameter)
+        DataController.complete(parameter[0])
         break;
     case "uncomplete" :
         DataController.uncomplete(parameter)
