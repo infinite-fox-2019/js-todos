@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "_id": 1,
+    "task": "test",
+    "completed": "Wed Sep 11 2019 18:10:53 GMT+0700 (Western Indonesia Time)",
+    "status": true,
+    "createdDate": "Wed Sep 11 2019 18:09:59 GMT+0700 (Western Indonesia Time)",
+    "tag": []
+  },
+  {
+    "_id": 2,
+    "task": "mandi",
+    "completed": "Wed Sep 11 2019 18:11:24 GMT+0700 (Western Indonesia Time)",
+    "status": true,
+    "createdDate": "Wed Sep 11 2019 18:10:06 GMT+0700 (Western Indonesia Time)",
+    "tag": []
+  },
+  {
+    "_id": 3,
+    "task": "makan",
+    "completed": "Wed Sep 11 2019 18:11:00 GMT+0700 (Western Indonesia Time)",
+    "status": true,
+    "createdDate": "Wed Sep 11 2019 18:10:11 GMT+0700 (Western Indonesia Time)",
+    "tag": []
+  }
+]
