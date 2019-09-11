@@ -16,7 +16,7 @@ class TodoViews {
   }
 
   static filter(data) {
-    console.log(data)
+    this.list(data)
   }
 }
 
