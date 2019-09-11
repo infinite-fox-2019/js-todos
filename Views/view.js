@@ -1,6 +1,6 @@
 class Views {
     static list(data) {
-        console.log(data);
+        console.table(data);
         for(let i = 0 ; i < data.length; i++){
             if (data[i]._completed == true) {
                 console.log(`${data[i]._id}. [X] ${data[i]._task}`);
@@ -42,6 +42,9 @@ class Views {
         // console.log(data);
     }
     static filter(data){
+        if (data.length == 0) {
+            console.log('tag tidak ditemukan!')
+        }
         for(let i = 0 ; i < data.length; i++){
             console.log(`${data[i]._id}. [ ${data[i]._tag} ]`);
         }

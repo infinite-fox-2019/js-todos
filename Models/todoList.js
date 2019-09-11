@@ -1,7 +1,7 @@
 const fs = require('fs')
 
 class TodoList {
-    constructor(id, task, status, createdAt, dateCompleted ,tag = []) {
+    constructor(id, task, status, createdAt, dateCompleted ,tag) {
         this._id = id
         this._task = task
         this._completed = status
@@ -22,10 +22,10 @@ class TodoList {
     static add(task) {
         let data = TodoList.list()
         if (data.length === 0) {
-            data.push(new TodoList(1,task))
+            data.push(new TodoList(1,task,false,new Date(),null,[]))
         } else {
             let noId = Number(data[data.length-1]._id) + 1
-            data.push(new TodoList(noId,task,false,new Date(),null))
+            data.push(new TodoList(noId,task,false,new Date(),null,[]))
         }
         TodoList.save(data)
     }
@@ -130,6 +130,50 @@ class TodoList {
         let temp = []
         for(let i = 0 ; i < data.length;i++){
             if (data[i]._completed == true) {
+                temp.push(data[i])
+            }
+        }
+        
+        for(let i = 0 ; i < temp.length ; i++){
+            for(let j = 0 ; j < temp.length-1; j++){
+                if (temp[j]._dateCompleted > temp[j+1]._dateCompleted) {
+                    let tempS = temp[j]
+                    temp[j] = temp[j+1]
+                    temp[j+1] = tempS
+                }
+            }
+        }
+        // console.log(temp);
+        return temp
+    }
+
+    static uncompleteAsc(){
+        let data = TodoList.list()
+        let temp = []
+        for(let i = 0 ; i < data.length;i++){
+            if (data[i]._completed == false) {
+                temp.push(data[i])
+            }
+        }
+        
+        for(let i = 0 ; i < temp.length ; i++){
+            for(let j = 0 ; j < temp.length-1; j++){
+                if (temp[j]._dateCompleted < temp[j+1]._dateCompleted) {
+                    let tempS = temp[j]
+                    temp[j] = temp[j+1]
+                    temp[j+1] = tempS
+                }
+            }
+        }
+        // console.log(temp);
+        return temp
+    }
+
+    static uncompleteDsc(){
+        let data = TodoList.list()
+        let temp = []
+        for(let i = 0 ; i < data.length;i++){
+            if (data[i]._completed == false) {
                 temp.push(data[i])
             }
         }

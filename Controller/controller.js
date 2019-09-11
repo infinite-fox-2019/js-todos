@@ -39,6 +39,14 @@ class Controller {
         let data = TodoList.completeDsc()
         TodoViews.list(data)
     }
+    static uncompleteAsc(){
+        let data = TodoList.uncompleteAsc()
+        TodoViews.list(data)        
+    }
+    static uncompleteDsc(){
+        let data = TodoList.uncompleteDsc()
+        TodoViews.list(data)
+    }
     static tagAdd(id,name){
         let data = TodoList.tagAdd(id,name)
         TodoViews.list(data)
