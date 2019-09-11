@@ -20,8 +20,11 @@ class View{
     static list(data) {
         console.log('-------== HERE\'S YOUR LIST ==-------\n')
         for (let i=0; i<data.length; i++){
-            if (data[i].isComplete == false){
-            } else console.log(`${data[i].id}. [x] ${data[i].task}`)
+            if (data[i].isComplete == false){ 
+                console.log(`${data[i].id}. [ ] ${data[i].task} ${data[i].created}`)
+            } else {
+                console.log(`${data[i].id}. [x] ${data[i].task} ${data[i].created}`)
+            }
         }
     }
 
@@ -33,14 +36,10 @@ class View{
     static showTaskId(taskById) {
         console.log(`${taskById.id}. ${taskById.task}`)
     }
+
     static showDeleted(taskById) {
         console.log(`Deleted ${taskById} from your TODO list...`)
     }
-    static showResultStatus(data) {
-        console.log('-------== HERE\'S YOUR LIST ==-------\n')
-        console.table(data)
-    }
-
     
 }
 

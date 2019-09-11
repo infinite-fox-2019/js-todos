@@ -14,7 +14,7 @@ class Controller {
 
     static add(task) {
         const newTask = Task.add(task)
-        View.showSuccess(newTask)
+        View.showAdd(newTask)
     }
 
     static findById(id) {
@@ -26,9 +26,37 @@ class Controller {
         let taskById = Task.delete(id)
         View.showDeleted(taskById)
     }
-    static complete(){
-        let data = Task.list()
+    static complete(id){
+        let data = Task.complete(id)
         View.list(data)
+    }
+    static uncomplete(id){
+        let data = Task.uncomplete(id)
+        View.list(data)
+    }
+    static asc() {
+        let data = Task.asc();
+        View.View(data);
+    }
+    static dsc() {
+        let data = Task.desc();
+        View.list(data);
+    }
+    static completeAsc() {
+        let data = Task.completeAsc();
+        View.list(data);
+    }
+    static completeDesc() {
+        let data = Task.completeDsc();
+        View.list(data);
+    }
+    static tag(id,tagName) {
+        let data = Task.tag(id,tagName);
+        View.list(data);
+    }
+    static filterTag(tagName) {
+        let data = Task.filterTag(tagName);
+        View.list(data);
     }
 
 }

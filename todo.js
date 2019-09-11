@@ -22,6 +22,31 @@ switch (command) {
     case 'complete' :
         Controller.complete(Number(parameters[0]))
         break
-    default : Controller.help()
+    case 'uncomplete' :
+        Controller.uncomplete(Number(parameters[0]))
+        break
+    case 'list:created' :
+        if (parameter[0] === 'asc'){
+            Controller.asc();
+        } else if (parameter[0] === 'desc') {
+            Controller.desc();
+        }
+    break;
+    case 'list:completed' :
+        if (parameter[0] === 'asc'){
+            Controller.completeAsc();
+        } else if (parameter[0] === 'desc') {
+            Controller.completeDsc();
+        }
+    break;
+    case 'tag' :
+        Controller.tag(parameter[0],tagName);
+    break;
+    case `filter:${command.slice(7)}`: 
+        Controller.filterTag(command.slice(7));
+        
+    break;
+    default:
+        Controllerler.help()
 }
 
