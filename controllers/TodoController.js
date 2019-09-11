@@ -3,8 +3,8 @@ const TodoViews = require('../views/TodoViews')
 const AlertViews = require('../views/AlertViews')
 
 class TodoController {
-  static list() {
-    const data = Todo.list()
+  static list(type, sortBy) {
+    const data = Todo.list(type, sortBy)
     TodoViews.list(data)
   }
 

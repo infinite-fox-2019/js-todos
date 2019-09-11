@@ -1,10 +1,14 @@
-const command = process.argv[2]
+const command = process.argv[2].split(':')
 const args = process.argv.slice(3)
 const TodoController = require('./controllers/TodoController')
 
-switch(command) {
+console.log('aaa', args[0])
+switch(command[0]) {
+  // case 'list':
+  //   TodoController.list()
+  //   break
   case 'list':
-    TodoController.list()
+    TodoController.list(command[1], args[0])
     break
   case 'add':
     TodoController.add(args[0])

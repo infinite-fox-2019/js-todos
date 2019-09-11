@@ -1,22 +1,34 @@
 const fs = require('fs')
 
 class Todo {
-  constructor(id, todo, isComplete, created_at) {
+  constructor(id, todo, isComplete, created_date) {
     this.id = id
     this.todo = todo
     this.isComplete = isComplete || false
-    this.created_at = created_at || new Date()
+    this.created_date = created_date || Date()
   }
 
   static findAll() {
     return JSON.parse(fs.readFileSync('./data.json')).map(data => {
-      const { id, todo, isComplete, created_at } = data
-      return new Todo(id, todo, isComplete, created_at)
+      const { id, todo, isComplete, created_date } = data
+      return new Todo(id, todo, isComplete, created_date)
     })
   }
 
-  static list() {
-    return this.findAll()
+  static list(type = '', sortBy = 'asc') {
+    const data = this.findAll()
+
+    if (type == 'created') {
+      if (sortBy == 'desc') {
+        return data.sort((a, b) => a.created_date < b.created_date)
+      } else {
+        return data.sort((a, b) => b.created_date < a.created_date)
+      }
+    } else if(type == 'completed') {
+
+    }
+
+    return data
   }
 
   static add(todo) {
@@ -77,7 +89,6 @@ class Todo {
   static save(data) {
     fs.writeFileSync('./data.json', JSON.stringify(data, null, 2))
   }
-  
 }
 
 module.exports = Todo

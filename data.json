@@ -1,14 +1,20 @@
 [
   {
     "id": 1,
-    "todo": "Play Dota",
+    "todo": "test",
     "isComplete": false,
-    "created_at": "2019-09-11T05:11:25.546Z"
+    "created_date": "Wed Sep 11 2019 15:04:57 GMT+0700 (Western Indonesia Time)"
   },
   {
     "id": 2,
-    "todo": "Code JS",
+    "todo": "test2",
     "isComplete": false,
-    "created_at": "2019-09-11T05:11:37.329Z"
+    "created_date": "Wed Sep 11 2019 15:10:39 GMT+0700 (Western Indonesia Time)"
+  },
+  {
+    "id": 3,
+    "todo": "test3",
+    "isComplete": false,
+    "created_date": "Wed Sep 11 2019 15:57:24 GMT+0700 (Western Indonesia Time)"
   }
 ]
