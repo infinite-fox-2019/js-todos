@@ -1,4 +1,3 @@
-// const fs = require('fs');
 const command = process.argv[2];
 const parameter = process.argv.slice(3);
 const tagName = process.argv.slice(4);

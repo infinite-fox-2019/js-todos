@@ -1,6 +1,5 @@
 const fs = require('fs');
 const data =  JSON.parse(fs.readFileSync('./data.json',JSON,'utf8'));
-
 class Todo {
     constructor (id,task,status,time,tagName) {
         this.id = id;
@@ -137,8 +136,4 @@ class Todo {
         return result;
     }
 }
-// Todo.add()
-// const coba = TodoModel();
-// console.log(TodoModel.list());
-
 module.exports = Todo;
