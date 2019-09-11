@@ -4,7 +4,6 @@ const TaskView = require('../Views/TaskView')
 class TaskController {
     static viewAll() {
         const data = Task.fileParsed()
-        console.table(data)
         TaskView.viewAll(data)
     }
 

@@ -66,7 +66,7 @@ class Task {
     static asc() {
         const data = this.fileParsed()
         for (let i = 0; i < data.length; i++) {
-            for (let j = i + 1; j < data.length - 1; j++) {
+            for (let j = i + 1; j <= data.length - 1; j++) {
                 if (data[i].timeCreated > data[j].timeCreated) {
                     [data[i],data[j]] = [data[j],data[i]]
                 }
@@ -79,7 +79,7 @@ class Task {
     static desc() {
         const data = this.fileParsed()
         for (let i = 0; i < data.length; i++) {
-            for (let j = i + 1; j < data.length - 1; j++) {
+            for (let j = i + 1; j <= data.length - 1; j++) {
                 if (data[i].timeCreated < data[j].timeCreated) {
                     [data[i],data[j]] = [data[j],data[i]]
                 }
