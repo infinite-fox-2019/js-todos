@@ -12,7 +12,9 @@ class View {
     }
 
     static show(data) {
+
         console.table(data)
+
     }
 
     static successDeleted(deleted) {

@@ -16,6 +16,7 @@ class ToDoList {
     }
     static read() {
         const data = JSON.parse(fs.readFileSync(filePath, 'utf8'))
+
         const toDoData = []
         data.forEach(task => {
             toDoData.push(new ToDoList(task.id, task.name, task.done, task.created, task.completed, task.tags))

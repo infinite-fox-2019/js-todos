@@ -67,6 +67,7 @@ class ToDoController {
     }
     static delete(id) {
         let deleted = ToDoList.delete(id)
+        
         if (!deleted) {
             View.showError()
         } else {
