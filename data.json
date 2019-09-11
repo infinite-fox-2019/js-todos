@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "id": 1,
+    "todo": "Belanja",
+    "complete": true,
+    "createdAt": "2019-09-11T04:32:08.837Z",
+    "completedDate": "2019-09-11T04:52:29.683Z",
+    "tag": [
+      "tag1",
+      "tag2"
+    ]
+  },
+  {
+    "id": 2,
+    "todo": "Makan Bakso",
+    "complete": false,
+    "createdAt": "2019-09-11T04:32:16.098Z",
+    "completedDate": "",
+    "tag": [
+      "tag2",
+      "tag3",
+      "tagtambahan"
+    ]
+  },
+  {
+    "id": 3,
+    "todo": "Makan Mie Ayam",
+    "complete": true,
+    "createdAt": "2019-09-11T04:32:24.062Z",
+    "completedDate": "2019-09-11T04:52:41.230Z",
+    "tag": [
+      "tag3",
+      "tag4"
+    ]
+  },
+  {
+    "id": 4,
+    "todo": "latihan soal",
+    "complete": false,
+    "createdAt": "2019-09-11T04:32:34.669Z",
+    "completedDate": "",
+    "tag": [
+      "adaTag"
+    ]
+  },
+  {
+    "id": 5,
+    "todo": "lulus dari hacktiv8",
+    "complete": true,
+    "createdAt": "2019-09-11T04:32:44.710Z",
+    "completedDate": "2019-09-11T04:52:49.878Z",
+    "tag": []
+  },
+  {
+    "id": 6,
+    "todo": "minum susu",
+    "complete": false,
+    "createdAt": "2019-09-11T04:32:51.585Z",
+    "completedDate": "",
+    "tag": []
+  }
+]
