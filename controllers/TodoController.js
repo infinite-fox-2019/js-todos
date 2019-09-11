@@ -43,9 +43,9 @@ class TodoController {
     const foundTask = Todo.findOne(Number(input))
     if (foundTask.found === true) {
       Todo.destroy(foundTask.task)
-      Display.successMessage(`Deleted ${foundTask.task.task} from your TODO list...`)
+      return Display.successMessage(`Deleted ${foundTask.task.task} from your TODO list...`)
     } else {
-      Display.errorMessage(`Task with id of ${input} is not found`)
+      return Display.errorMessage(`Task with id of ${input} is not found`)
     }
   }
 
@@ -54,7 +54,7 @@ class TodoController {
     if (foundTask.found === true) {
       Todo.update(command, foundTask.task)
     } else {
-      Display.errorMessage(`Task with id of ${input} is not found`)
+      return Display.errorMessage(`Task with id of ${input} is not found`)
     }
   }
 
@@ -62,9 +62,9 @@ class TodoController {
     const foundTask = Todo.findOne(Number(id))
     if (foundTask.found === true) {
       const updated = Todo.update('tag', foundTask.task, tags)
-      Display.successMessage(`Tagged task ${updated.task} with tag: ${tags}`)
+      return Display.successMessage(`Tagged task ${updated.task} with tag: ${tags}`)
     } else {
-      Display.errorMessage(`Task with id of ${id} is not found`)
+      return Display.errorMessage(`Task with id of ${id} is not found`)
     }
   }
 
