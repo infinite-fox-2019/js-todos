@@ -1,1 +1,61 @@
-[]
+[
+  {
+    "id": 1,
+    "toDo": "subuh prayer",
+    "status": "[V]",
+    "time": "2019-09-11T08:21:55.501Z",
+    "tag": [
+      "pray"
+    ]
+  },
+  {
+    "id": 3,
+    "toDo": "coding",
+    "status": "[ ]",
+    "time": "2019-09-11T11:20:03.539Z",
+    "tag": [
+      "no life"
+    ]
+  },
+  {
+    "id": 4,
+    "toDo": "go to hacktiv8",
+    "status": "[ ]",
+    "time": "2019-09-11T08:22:31.670Z",
+    "tag": [
+      "hacktiv"
+    ]
+  },
+  {
+    "id": 5,
+    "toDo": "lunch",
+    "status": "[ ]",
+    "time": "2019-09-11T08:23:22.101Z",
+    "tag": [
+      "hungry",
+      "food",
+      "enak"
+    ]
+  },
+  {
+    "id": 6,
+    "toDo": "dhuhur prayer",
+    "status": "[V]",
+    "time": "2019-09-11T08:23:07.278Z",
+    "tag": [
+      "pray"
+    ]
+  },
+  {
+    "id": 7,
+    "toDo": "study",
+    "status": "[ ]",
+    "time": "2019-09-11T11:16:48.211Z",
+    "tag": [
+      "study",
+      "succes",
+      "hard",
+      "oke"
+    ]
+  }
+]
