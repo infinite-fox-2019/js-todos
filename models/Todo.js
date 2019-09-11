@@ -113,6 +113,21 @@ class Todo {
     this.save(data)
   }
 
+  static filter(query) {
+    const data = this.findAll()
+    const result = []
+
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].tags) {
+        for (let j = 0; j < data[i].tags.length; j++) {
+          if (data[i].tags[j] == query) result.push(data[i])
+        }
+      }
+    }
+
+    return result 
+  }
+
   static save(data) {
     fs.writeFileSync('./data.json', JSON.stringify(data, null, 2))
   }

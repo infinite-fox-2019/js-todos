@@ -22,6 +22,10 @@ class TodoViews {
   static uncomplete(data) {
     console.table(data)
   }
+
+  static filter(data) {
+    console.log(data)
+  }
 }
 
 module.exports = TodoViews

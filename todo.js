@@ -24,6 +24,9 @@ switch(command[0]) {
   case 'tag':
     TodoController.tag(args[0], args.slice(1))
     break
+  case 'filter':
+    TodoController.filter(command[1])
+    break
   case 'help':
   case undefined:
     console.log('$ node todo.js # Will call help')

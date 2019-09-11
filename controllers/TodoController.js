@@ -35,6 +35,12 @@ class TodoController {
 
   static tag(id, tags) {
     Todo.tag(id, tags)
+    TodoViews.successMessageAdd(tags)
+  }
+
+  static filter(query) {
+    const data = Todo.filter(query)
+    TodoViews.filter(data)
   }
 }
 
