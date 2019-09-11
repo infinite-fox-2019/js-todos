@@ -28,6 +28,10 @@ class ViewMessage {
     static showCompletedTask(completedTask) {
         console.log(completedTask);
     }
+
+    static showIncompletedTask(incompletedTask) {
+        console.log(incompletedTask);
+    }
 }
 
 module.exports = ViewMessage;

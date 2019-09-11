@@ -30,6 +30,11 @@ class ToDoController {
         const completedTask = ToDoList.completedTaskById(id);
         ViewMessage.showCompletedTask(completedTask);
     }
+
+    static incompletedTask(id) {
+        const incompletedTask = ToDoList.incompletedTaskById(id);
+        ViewMessage.showIncompletedTask(incompletedTask);
+    }
 }
 
 module.exports = ToDoController;

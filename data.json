@@ -1,47 +1,47 @@
 [
   {
     "id": 1,
-    "status": " ",
+    "status": false,
     "task": "wertyuiop"
   },
   {
     "id": 2,
-    "status": " ",
+    "status": false,
     "task": "qwertyuiop"
   },
   {
     "id": 3,
-    "status": "x",
+    "status": true,
     "task": "asdfghjkl"
   },
   {
     "id": 4,
-    "status": " ",
+    "status": false,
     "task": "asdfghjkl"
   },
   {
     "id": 5,
-    "status": " ",
+    "status": true,
     "task": "asdfghjkl"
   },
   {
     "id": 6,
-    "status": " ",
+    "status": false,
     "task": "asdfghjkl"
   },
   {
     "id": 7,
-    "status": " ",
+    "status": false,
     "task": "asdfghjkl"
   },
   {
     "id": 8,
-    "status": " ",
+    "status": false,
     "task": "asdfghjkl"
   },
   {
     "id": 9,
-    "status": " ",
+    "status": false,
     "task": "asdfghjkl"
   }
 ]

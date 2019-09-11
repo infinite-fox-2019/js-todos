@@ -20,10 +20,10 @@ switch(command) {
         Controller.deleteTaskById(input);
         break;
     case "complete":
-        Controller.completedTask(input)
+        Controller.completedTask(input);
         break;
     case "incomplete":
-
+        Controller.incompletedTask(input);
         break;
     default:
         Controller.showHelp();

@@ -1,9 +1,9 @@
 const fs = require('fs');
 
 class ToDoList {
-    constructor(id, task) {
+    constructor(id, status, task) {
         this.id = id;
-        this.status = false;
+        this.status = status;
         this.task = task;
     }
 
@@ -16,7 +16,7 @@ class ToDoList {
         const list = this.readTask();
         const listArr = [];
         for(let i = 0; i < list.length; i++) {
-            listArr.push(new ToDoList(list[i].id, list[i].task));
+            listArr.push(new ToDoList(list[i].id, list[i].status, list[i].task));
         }
         return listArr;
     }
@@ -67,6 +67,18 @@ class ToDoList {
         for(let i = 0; i < allTasks.length; i++) {
             if(allTasks[i].id === searchedId) {
                 allTasks[i].status = true;
+            }
+        }
+        this.save(allTasks);
+        return allTasks;
+    }
+
+    static incompletedTaskById(id) {
+        const allTasks = this.showAllTask();
+        const searchedId = parseInt(id);
+        for(let i = 0; i < allTasks.length; i++) {
+            if(allTasks[i].id === searchedId) {
+                allTasks[i].status = false;
             }
         }
         this.save(allTasks);
