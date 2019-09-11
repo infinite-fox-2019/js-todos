@@ -41,6 +41,23 @@ class ToDoControllers {
     const newLists = ToDoModels.dataUncomplete(id);
     return ToDoViews.viewAllList(newLists);
   }
+
+  static listCreated(ascDesc = 'asc'){
+    return ToDoViews.viewAllList(ToDoModels.listCreated(ascDesc));
+  }
+
+  static listCompleted(ascDesc = 'asc'){
+    return ToDoViews.viewAllList(ToDoModels.listCompleted(ascDesc));
+  }
+
+  static addTag(id,tag){
+    const newData = ToDoModels.addTag(id,tag);
+    return ToDoViews.addTag(newData, tag)
+  }
+
+  static filterTag(tag){
+    return ToDoViews.filterTag(ToDoModels.filterTag(tag))
+  }
 }
 
 module.exports = ToDoControllers;

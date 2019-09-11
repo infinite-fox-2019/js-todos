@@ -3,7 +3,12 @@ class ToDoViews {
     console.log('This is the TODO list :');
     // console.log(allList);
     for(let i = 0; i < allList.length; i++){
-      console.log(`${allList[i]['_id']}. ${allList[i]['_completed']} ${allList[i]['_task']}`); 
+      if(!allList[i]['_completed']){
+        console.log(`${allList[i]['_id']}. [ ] ${allList[i]['_task']}`); 
+      }
+      else{
+        console.log(`${allList[i]['_id']}. [x] ${allList[i]['_task']}`); 
+      }
     }
   }
 
@@ -28,6 +33,16 @@ class ToDoViews {
     
   }
 
+  static addTag(data, tag){
+    console.log(`Tagged task "${data['_task']}" with tags: ${tag.join(' ')}`);
+  }
+
+  static filterTag(data){
+    console.log('This is the filtered TODO list :');
+    for(let i = 0; i < data.length; i++){
+      console.log(`${data[i]['_id']}. ${data[i]['_task']} [${data[i]['_tag']}]`); 
+    }
+  }
 }
 
 module.exports = ToDoViews;

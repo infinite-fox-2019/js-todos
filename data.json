@@ -1,38 +1,35 @@
 [
   {
-    "_id": 4,
-    "_completed": "[V]",
-    "_task": "tidur",
-    "_tag": []
+    "_id": 1,
+    "_completed": true,
+    "_task": "Menatap komputer",
+    "_tag": [],
+    "_createDate": "2019-09-11T10:09:52.104Z",
+    "_completedDate": "2019-09-11T10:10:43.844Z"
   },
   {
-    "_id": 5,
-    "_completed": "[ ]",
-    "_task": "Makan bersama teman",
-    "_tag": []
+    "_id": 2,
+    "_completed": true,
+    "_task": "Menatap nasib",
+    "_tag": [
+      "alam",
+      "psikologi",
+      "dunia",
+      "fana"
+    ],
+    "_createDate": "2019-09-11T10:10:04.372Z",
+    "_completedDate": "2019-09-11T10:10:47.381Z"
   },
   {
-    "_id": 6,
-    "_completed": "[ ]",
-    "_task": "Makan bersama teman2",
-    "_tag": []
-  },
-  {
-    "_id": 7,
-    "_completed": "[ ]",
-    "_task": "Makan bersama teman2 besok",
-    "_tag": []
-  },
-  {
-    "_id": 8,
-    "_completed": "[ ]",
-    "_task": "Makan bersama keluarga",
-    "_tag": []
-  },
-  {
-    "_id": 9,
-    "_completed": "[X]",
-    "_task": "Makan selalu",
-    "_tag": []
+    "_id": 3,
+    "_completed": false,
+    "_task": "Menatapi indahnya dunia",
+    "_tag": [
+      "pemandangan",
+      "alam",
+      "alami"
+    ],
+    "_createDate": "2019-09-11T10:10:13.654Z",
+    "_completedDate": null
   }
 ]
