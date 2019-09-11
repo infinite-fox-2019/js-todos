@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "id": 1,
+    "task": "Bikin aplikasi",
+    "isComplete": true
+  },
+  {
+    "id": 2,
+    "task": "Main Node.js",
+    "isComplete": false
+  },
+  {
+    "id": 3,
+    "task": "baca",
+    "isComplete": false
+  }
+]
