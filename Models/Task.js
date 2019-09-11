@@ -175,14 +175,19 @@ class Task {
 
     static listTag(arrTag) {
         let recentData = Task.listData();
+
         for (let i = 1; i < arrTag.length; i++) {
             let checkTagNow = arrTag[i];
             for (let j = 0; j < recentData.length; j++) {
-                if (arrTag[0] === recentData[j].id) {
+                if (arrTag[0] == recentData[j].id) {
+                    let tempCheck = [];
                     for (let k = 0; k < recentData[j].tag.length; k++) {
-                        if (checkTagNow !== recentData[j].tag[k]) {
-                            recentData.push(checkTagNow);
+                        if (checkTagNow === recentData[j].tag[k]) {
+                            tempCheck.push(true);
                         }
+                    }
+                    if (tempCheck.length === 0) {
+                        recentData[j].tag.push(checkTagNow)
                     }
                 }
             }
