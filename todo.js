@@ -18,7 +18,8 @@ switch ( comand ) {
         console.log('--node todo.js complete <task_id>-- Menandai status TODO selsai');
         console.log('--node todo.js uncomplete <task_id>-- Menandai status TODO belum selesai');
         console.log('--node todo.js tag <id> <name_1> <name_2> ...  -- Menambahkan beberapa tag pada TODO');
-        console.log('--node todo.js filter:<tag>-- Menfilter berdasarkan tag');
+        console.log('--node todo.js filterByTag <tag>-- Menfilter berdasarkan tag');
+        console.log('--node todo.js filterByStatus <status>-- Menfilter berdasarkan Status');
         break;
     case "list" :
         controller.takeData();
@@ -47,7 +48,10 @@ switch ( comand ) {
     case 'tag' :
         controller.addTags ( argumentTags );
         break;
-    case 'filter' :
+    case 'filterByTag' :
         controller.getByTagFilter ( argument );
+        break;
+    case 'filterByStatus' :
+        controller.getByStatusFilter ( );
         break;
 }

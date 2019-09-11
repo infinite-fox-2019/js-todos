@@ -38,6 +38,10 @@ class Controller {
         let getFilter = View.viewFilterTag ( TodoList.getbyFilter ( data ) );
         return getFilter;
     }
+    static getByStatusFilter ( ) {
+        let getFilter = View.viewFilterStatus ( TodoList.getByStatusFilter ( ) );
+        return getFilter;
+    }
 }
 
 module.exports = Controller;

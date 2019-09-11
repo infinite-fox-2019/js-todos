@@ -19,10 +19,11 @@ class Task {
 
     static add ( task ) {
         let takeStatus = false;
+        let newTags = [];
         let newDate = new Date ();
         let take = this.showData();
         let idd = Number((take[take.length-1].id)+1);
-        take.push(new Task( idd , task , takeStatus , newDate ));
+        take.push(new Task( idd , task , takeStatus , newDate ,newTags));
         this.save(take);
     }
     static save ( task ) {
@@ -80,14 +81,16 @@ class Task {
     static addTags ( arr ) {
         let getData = this.showData ();
         let getTags = arr.slice(1);
+        let record = {}
         for ( let i=0; i<getData.length; i++ ) {
             if ( getData[i].id == arr[0] ) {
-                // record = getData[i]
+                record['task'] = getData[i].task;
+                record['tags'] = getTags;
                 getData[i].tags.push ( String(getTags) );
             }
         }
         this.save ( getData );
-        return getData;
+        return record;
     }
     static getbyFilter ( data ) {
         let getTags = this.showData ();
@@ -103,6 +106,16 @@ class Task {
             }
         }
         return result;
+    }
+    static getByStatusFilter () {
+        let getData = this.showData ();
+        let tamp = [];
+        for ( let i=0; i<getData.length; i++ ) {
+            if (getData[i].status) {
+                tamp.push (getData[i].task)
+            }
+        }
+        return tamp;
     }
 }
 

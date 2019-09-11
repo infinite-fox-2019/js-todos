@@ -11,7 +11,7 @@
      {
           "id": 2,
           "task": "Main Node.js",
-          "status": "true",
+          "status": true,
           "date": "2019-09-10T08:56:50.224Z",
           "tags": [
                "javascript,github,node"
@@ -20,7 +20,7 @@
      {
           "id": 3,
           "task": "shutdown my Computer",
-          "status": "false",
+          "status": true,
           "date": "2019-09-11T08:56:55.224Z",
           "tags": [
                "poweroff,games"
@@ -29,7 +29,7 @@
      {
           "id": 4,
           "task": "make game",
-          "status": "false",
+          "status": true,
           "date": "2019-09-11T09:00:08.733Z",
           "tags": [
                "games,javascript"
@@ -37,11 +37,11 @@
      },
      {
           "id": 5,
-          "task": "Belajar Javascript",
-          "status": true,
-          "date": "2019-09-11T09:16:17.958Z",
+          "task": "make a dream",
+          "status": false,
+          "date": "2019-09-11T14:35:58.358Z",
           "tags": [
-               "array,object,sorting,logic"
+               "pray,sleep,make a wish,play hard"
           ]
      }
 ]
