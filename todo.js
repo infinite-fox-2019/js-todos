@@ -20,15 +20,18 @@ switch (command) {
         break;
     case 'add':
         Controllers.add(parameters[0]);
-        console.log(`Added ${parameters[0]} to your TODO list..`);
         break;
     case 'findById':
+        Controllers.findById(Number(parameters[0]));
         break;
     case 'delete':
+        Controllers.delete(Number(parameters[0]));
         break;
     case 'complete':
+        Controllers.complete(Number(parameters[0]));
         break;
     case 'uncomplete':
+        Controllers.uncomplete(Number(parameters[0]));
         break;
     default:
         console.log('usage:');

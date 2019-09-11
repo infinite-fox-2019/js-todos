@@ -1,10 +1,12 @@
 [
-    {
-        "id": 1,
-        "task": "belajar"
-    },
-    {
-        "id": 2,
-        "task": "baca novel"
-    }
+  {
+    "id": 1,
+    "status": " ",
+    "task": "belajar"
+  },
+  {
+    "id": 2,
+    "status": " ",
+    "task": "baca novel"
+  }
 ]
