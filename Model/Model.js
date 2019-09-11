@@ -59,8 +59,8 @@ class Todo {
     static complete(id) {
         for (let i = 0; i < data.length; i++) {
             if (Number(id) === data[i].id) {
-                data[i].status = ['X'];
-                data[i].time = new Date();
+                data[i].status = ['V'];
+                data[i].time = String(new Date());
             }
         }
         Todo.save();
@@ -70,7 +70,7 @@ class Todo {
         for (let i = 0; i < data.length; i++) {
             if (Number(id) === data[i].id) {
                 data[i].status = [' '];
-                data[i].time = new Date();
+                data[i].time = String(new Date());
             }
         }
         Todo.save();

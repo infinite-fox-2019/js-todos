@@ -5,7 +5,7 @@
     "status": [
       "V"
     ],
-    "time": "2019-09-11T09:39:30.959Z",
+    "time": "Wed Sep 11 2019 18:25:33 GMT+0700 (Western Indonesia Time)",
     "tagName": [
       "lifestyle",
       "food"
@@ -15,18 +15,18 @@
     "id": 2,
     "task": "minum",
     "status": [
-      " "
+      "V"
     ],
-    "time": "2019-09-11T09:39:42.372Z",
+    "time": "Wed Sep 11 2019 18:25:31 GMT+0700 (Western Indonesia Time)",
     "tagName": []
   },
   {
     "id": 3,
     "task": "belajar",
     "status": [
-      " "
+      "V"
     ],
-    "time": "2019-09-11T10:16:12.648Z",
+    "time": "Wed Sep 11 2019 18:25:37 GMT+0700 (Western Indonesia Time)",
     "tagName": [
       "lifestyle",
       "hobby",
@@ -37,9 +37,9 @@
     "id": 4,
     "task": "bernyanyi",
     "status": [
-      " "
+      "V"
     ],
-    "time": "2019-09-11T09:39:54.728Z",
+    "time": "Wed Sep 11 2019 18:25:40 GMT+0700 (Western Indonesia Time)",
     "tagName": [
       "hobby",
       "lifestyle"
@@ -49,9 +49,9 @@
     "id": 5,
     "task": "bangun tidur",
     "status": [
-      "X"
+      "V"
     ],
-    "time": "2019-09-11T10:16:36.127Z",
+    "time": "Wed Sep 11 2019 18:25:43 GMT+0700 (Western Indonesia Time)",
     "tagName": [
       "hobby"
     ]
@@ -62,19 +62,10 @@
     "status": [
       " "
     ],
-    "time": "2019-09-11T10:21:42.924Z",
+    "time": "Wed Sep 11 2019 18:26:05 GMT+0700 (Western Indonesia Time)",
     "tagName": [
       "activities",
       "routine"
     ]
-  },
-  {
-    "id": 7,
-    "task": "bangun tidur juga",
-    "status": [
-      " "
-    ],
-    "time": "2019-09-11T10:55:48.474Z",
-    "tagName": []
   }
 ]

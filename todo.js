@@ -62,6 +62,10 @@ switch(command) {
     case 'tag' :
         Control.tag(parameter[0],tagName);
     break;
+    case undefined :
+        console.table(commandListData);
+
+    break
     case `filter:${command.slice(7)}`: 
         Control.filterTag(command.slice(7));
         
