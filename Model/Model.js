@@ -2,23 +2,33 @@ const fs = require('fs');
 const data =  JSON.parse(fs.readFileSync('./data.json',JSON,'utf8'));
 
 class Todo {
-    constructor (id,task,status) {
+    constructor (id,task,status,time) {
         this.id = id;
         this.task = task;
         this.status = status;
+        this.time = time;
+        this.tagName = [];
     }
     static list() {
         let toDoArr = [];
         for (let i = 0; i < data.length; i++) {
-            toDoArr.push(new Todo (data[i].id,data[i].task,data[i].status));
+            toDoArr.push(new Todo (data[i].id,data[i].task,data[i].status,data[i].time));
         }
         return toDoArr;
     }
     static add(task) {
         let newTask = {
-            id: data[data.length-1].id + 1,
-            task: task
+            id: 0,
+            task: task,
+            status: [' '],
+            time: new Date,
+            tagName: []
         };
+        if (data.length === 0) {
+            newTask.id = 1;
+        } else {
+            newTask.id = data[data.length-1].id +1;
+        }
         data.push(newTask);
         Todo.save();
         
@@ -50,6 +60,7 @@ class Todo {
         for (let i = 0; i < data.length; i++) {
             if (Number(id) === data[i].id) {
                 data[i].status = ['X'];
+                data[i].time = new Date();
             }
         }
         Todo.save();
@@ -59,10 +70,71 @@ class Todo {
         for (let i = 0; i < data.length; i++) {
             if (Number(id) === data[i].id) {
                 data[i].status = [' '];
+                data[i].time = new Date();
             }
         }
         Todo.save();
         return data;
+    }
+    static asc() {
+        for (let i = 0; i < data.length; i++) {
+            for (let j = i +1; j < data.length; j++) {
+                if (data[i].time > data[j].time) {
+                    [data[i],data[j]] = [data[j],data[i]];
+                }
+            }
+        }
+        return data;
+    }
+    static desc() {
+        for (let i = 0; i < data.length; i++) {
+            for (let j = i +1; j < data.length; j++) {
+                if (data[i].time < data[j].time) {
+                    [data[i],data[j]] = [data[j],data[i]];
+                }
+            }
+        }
+        return data;
+    }
+    static completeAsc() {
+        let result = [];
+        this.asc();
+        for (let i = 0; i < data.length; i++) {
+            if (data[i].status[0] === 'V') {
+                result.push(data[i]);
+            }
+        }
+        return result;
+    }
+    static completeDesc() {
+        let result = [];
+        this.desc();
+        for (let i = 0; i < data.length; i++) {
+            if (data[i].status[0] === 'V') {
+                result.push(data[i]);
+            }
+        }
+        return result;
+    }
+    static tag(id,tagName) {
+        for (let i = 0; i < data.length; i++) {
+            if (Number(data[i].id) === Number(id)) {
+                data[i].tagName = tagName;
+            }
+        }
+        Todo.save();
+        return data;
+    }
+    static filterTag(tagName) {
+        let result = [];
+        for (let i = 0; i < data.length; i++) {
+            for (let j = 0; j< data[i].tagName.length; j++) {
+                if (data[i].tagName[j] === tagName) {
+                    result.push(data[i]);
+                }
+            }
+        }
+        return result;
     }
 }
 // Todo.add()

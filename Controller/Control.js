@@ -25,6 +25,30 @@ class TodoController {
         let data = Model.uncomplete(id);
         View.uncomplete(data);
     }
+    static asc() {
+        let data = Model.asc();
+        View.View(data);
+    }
+    static desc() {
+        let data = Model.desc();
+        View.View(data);
+    }
+    static completeAsc() {
+        let data = Model.completeAsc();
+        View.View(data);
+    }
+    static completeDesc() {
+        let data = Model.completeDesc();
+        View.View(data);
+    }
+    static tag(id,tagName) {
+        let data = Model.tag(id,tagName);
+        View.View(data);
+    }
+    static filterTag(tagName) {
+        let data = Model.filterTag(tagName);
+        View.View(data);
+    }
 }
 
 module.exports = TodoController;
