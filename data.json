@@ -58,5 +58,26 @@
       "game",
       "pc"
     ]
+  },
+  {
+    "status": [],
+    "id": 7,
+    "task": "makan indomie",
+    "date": "2019-09-11T16:58:05.794Z",
+    "tag": [
+      "kuliner"
+    ]
+  },
+  {
+    "status": [
+      "x"
+    ],
+    "id": 8,
+    "task": "tidur tiduran",
+    "date": "2019-09-11T16:59:12.765Z",
+    "tag": [
+      "istirahat",
+      "tidur"
+    ]
   }
 ]
