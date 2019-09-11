@@ -77,7 +77,7 @@
   {
     "id": 6,
     "todo": "kesky dan kimmy",
-    "isComplete": true,
+    "isComplete": false,
     "completed_date": "2019-09-11T09:55:05.520Z",
     "tags": [],
     "created_date": "2019-09-11T09:50:28.819Z"

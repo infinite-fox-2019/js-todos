@@ -15,14 +15,6 @@ class TodoViews {
     }
   }
 
-  static complete(data) {
-    console.log(data)
-  }
-
-  static uncomplete(data) {
-    console.log(data)
-  }
-
   static filter(data) {
     console.log(data)
   }

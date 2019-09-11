@@ -55,7 +55,7 @@ class Todo {
 
   static findById(id) {
     const newData = this.findAll().filter(d => d.id == id)
-    if (!filtered.length) return { isFound: false, id }
+    if (!newData.length) return { isFound: false, id }
     return newData
   }
 

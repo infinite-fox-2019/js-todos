@@ -28,20 +28,17 @@ class TodoController {
 
   static complete(id) {
     const data = Todo.complete(id)
-    // TodoViews.complete(data)
     TodoViews.list(data)
   }
 
   static uncomplete(id) {
     const data = Todo.uncomplete(id)
-    // TodoViews.uncomplete(data)
     TodoViews.list(data)
   }
 
   static tag(id, tags) {
     const data = Todo.tag(id, tags)
     AlertViews.successMessageAddTags(data)
-    // TodoViews.list(data)
   }
 
   static filter(query) {
