@@ -8,8 +8,8 @@ class TodoController {
     }
 
     static add(task) {
-        Todo.add(task);
-        TodoView.showAddMessage(task);
+        let addedTodo = Todo.add(task);
+        TodoView.showAddMessage(addedTodo);
     }
 
     static getById(id) {
@@ -18,8 +18,8 @@ class TodoController {
     }
 
     static deleteById(id) {
-        let theTask = Todo.deleteById(id);
-        TodoView.showDeleteMessage(theTask);
+        let deletedTodo = Todo.deleteById(id);
+        TodoView.showDeleteMessage(deletedTodo);
     }
 
     static completeById(id, isComplete) {
@@ -30,6 +30,16 @@ class TodoController {
     static getListSort(attribute, order) {
         let todos = Todo.getListSort(attribute, order);
         TodoView.showList(todos);
+    }
+
+    static tagById(id, tags) {
+        let theTodo = Todo.tagById(id, tags);
+        TodoView.showTagMessage(theTodo);
+    }
+
+    static getListByTag(tag) {
+        let todos = Todo.getListByTag(tag);
+        TodoView.showFilterDisplay(todos);
     }
 }
 

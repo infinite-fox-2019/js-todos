@@ -1,6 +1,6 @@
 const TodoController = require('./Controller/TodoController');
 
-let command = process.argv[2].split(':');
+let command = process.argv[2] ? process.argv[2].split(':') : '';
 let parameters = process.argv.slice(3);
 
 switch(command[0]) {
@@ -25,6 +25,12 @@ switch(command[0]) {
     break;
     case 'uncomplete':
         TodoController.completeById(Number(parameters[0]), false);
+    break;
+    case 'tag':
+        TodoController.tagById(Number(parameters[0]), parameters.slice(1));
+    break;
+    case 'filter':
+        TodoController.getListByTag(command[1]);
     break;
     default:
         console.log('node todo.js');
