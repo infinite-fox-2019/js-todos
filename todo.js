@@ -7,6 +7,9 @@ switch(command) {
     case 'list':
         TodoController.getList();
     break;
+    case 'add':
+        TodoController.addTodo(parameters[0]);
+    break;
     default:
         console.log('node todo.js');
         console.log('node todo.js help');

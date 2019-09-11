@@ -4,6 +4,10 @@ class TodoView {
             console.log(`${todos[i].id}. ${todos[i].task}`);
         }
     }
+
+    static showAddMessage(task) {
+        console.log(`Added ${task} to your TODO list...`)
+    }
 }
 
 module.exports = TodoView;

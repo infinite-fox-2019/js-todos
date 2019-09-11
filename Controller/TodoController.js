@@ -6,6 +6,11 @@ class TodoController {
         let todos = TodoModel.getList();
         TodoView.showList(todos);
     }
+
+    static addTodo(task) {
+        TodoModel.addTodo(task);
+        TodoView.showAddMessage(task);
+    }
 }
 
 module.exports = TodoController;
