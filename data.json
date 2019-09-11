@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "status": [
+      "X"
+    ],
+    "id": 1,
+    "task": "Bermain dengan kucing",
+    "created_date": "2019-09-11T12:43:14.437Z",
+    "completed_date": "2019-09-11T12:44:26.598Z",
+    "tag": [
+      "hobi",
+      "pet"
+    ]
+  },
+  {
+    "status": [],
+    "id": 2,
+    "task": "Lari pagi",
+    "created_date": "2019-09-11T12:43:28.051Z",
+    "completed_date": null,
+    "tag": []
+  },
+  {
+    "status": [],
+    "id": 3,
+    "task": "Manasin motor",
+    "created_date": "2019-09-11T12:43:39.117Z",
+    "completed_date": null,
+    "tag": []
+  },
+  {
+    "status": [],
+    "id": 4,
+    "task": "Mandi",
+    "created_date": "2019-09-11T12:43:45.513Z",
+    "completed_date": null,
+    "tag": []
+  },
+  {
+    "status": [],
+    "id": 5,
+    "task": "sarapan",
+    "created_date": "2019-09-11T12:44:00.892Z",
+    "completed_date": null,
+    "tag": []
+  }
+]
