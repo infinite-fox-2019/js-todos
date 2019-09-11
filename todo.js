@@ -16,6 +16,12 @@ switch(command) {
     case 'delete':
         TodoController.deleteTodoById(Number(parameters[0]));
     break;
+    case 'complete':
+        TodoController.completeTodoById(Number(parameters[0]));
+    break;
+    case 'uncomplete':
+        TodoController.uncompleteTodoById(Number(parameters[0]));
+    break;
     default:
         console.log('node todo.js');
         console.log('node todo.js help');

@@ -48,6 +48,32 @@ class Todo {
             return undefined;
         }
     }
+
+    static completeTodoById(id) {
+        let todos = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
+        for(let i = 0; i < todos.length; i++) {
+            if(todos[i].id === id) {
+                todos[i].complete = true;
+            }
+        }
+
+        fs.writeFileSync('./data.json', JSON.stringify(todos, 0, 2));
+
+        return this.getList();
+    }
+
+    static uncompleteTodoById(id) {
+        let todos = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
+        for(let i = 0; i < todos.length; i++) {
+            if(todos[i].id === id) {
+                todos[i].complete = false;
+            }
+        }
+
+        fs.writeFileSync('./data.json', JSON.stringify(todos, 0, 2));
+
+        return this.getList();
+    }
 }
 
 module.exports = Todo;

@@ -19,8 +19,17 @@ class TodoController {
 
     static deleteTodoById(id) {
         let theTask = Todo.deleteTodoById(id);
-        console.log(theTask);
         TodoView.showDeleteMessage(theTask);
+    }
+
+    static completeTodoById(id) {
+        let todos = Todo.completeTodoById(id);
+        TodoView.showList(todos);
+    }
+
+    static uncompleteTodoById(id) {
+        let todos = Todo.uncompleteTodoById(id);
+        TodoView.showList(todos);
     }
 }
 

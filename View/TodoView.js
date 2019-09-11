@@ -1,7 +1,7 @@
 class TodoView {
     static showList(todos) {
         for(let i = 0; i < todos.length; i++) {
-            console.log(`${todos[i].id}. ${todos[i].task}`);
+            console.log(`${todos[i].id}. [${todos[i].complete ? 'x' : ' '}] ${todos[i].task}`);
         }
     }
 
@@ -9,7 +9,7 @@ class TodoView {
         if(todo === undefined) {
             console.log('Task not found!');
         } else {
-            console.log(`${todo.id}. ${todo.task}`);
+            console.log(`${todo.id}. [${todo.complete ? 'x' : ' '}]${todo.task}`);
         }
     }
 
