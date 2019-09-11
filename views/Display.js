@@ -14,10 +14,12 @@ class Display {
   }
 
   static listMessage(data) {
-    console.log(`=======This is All your Task======\n`)
+    console.log(`==================================`)
+    console.log(`=======This is All your Task======`)
     data.forEach(task => {
       console.log(`${task.id}. [${task.completed === true ? 'X' : ' '}] ${task.task}`)
     })
+    console.log(`==================================`)
   }
 
   static successMessage(msg) {
@@ -33,10 +35,12 @@ class Display {
   }
 
   static filterMsg(tag, data) {
-    console.log(`This is all your task with ${tag} tag >>>>>>>\n`) 
+    console.log(`==================================`)
+    console.log(`This is all your task with ${tag} tag>>`) 
     data.forEach(task => {
       console.log(`${task.id}. ${task.task} [${task.tag}]`)
     })
+    console.log(`==================================`)
   }
 }
 

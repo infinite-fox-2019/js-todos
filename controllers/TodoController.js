@@ -52,7 +52,8 @@ class TodoController {
   static completeUncomplete(command, id) {
     const foundTask = Todo.findOne(Number(id))
     if (foundTask.found === true) {
-      Todo.update(command, foundTask.task)
+      const data = Todo.update(command, foundTask.task)
+      return Display.listMessage(data)
     } else {
       return Display.errorMessage(`Task with id of ${input} is not found`)
     }

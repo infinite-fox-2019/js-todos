@@ -107,6 +107,7 @@ class Todo {
         data[indexTask].completed = false
       }
       this.save(data)
+      return data
     }
 
     if (command === 'tag') {
