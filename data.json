@@ -1,1 +1,57 @@
-[]
+[
+  {
+    "id": 4,
+    "todo": "Coba hapus data ini 2",
+    "created_date": "Wed Sep 11 2019 11:53:47 GMT+0700 (WIB)",
+    "status": false,
+    "tags": [
+      "hacktiv8",
+      "phase1"
+    ],
+    "completed_date": null
+  },
+  {
+    "id": 5,
+    "todo": "nonton youtube",
+    "created_date": "Wed Sep 11 2019 15:12:37 GMT+0700 (WIB)",
+    "status": true,
+    "tags": [
+      "fun"
+    ],
+    "completed_date": "Wed Sep 11 2019 16:02:06 GMT+0700 (WIB)"
+  },
+  {
+    "id": 6,
+    "todo": "sebat dulu bos",
+    "created_date": "Wed Sep 11 2019 15:12:55 GMT+0700 (WIB)",
+    "status": true,
+    "tags": [
+      "hidup sehat",
+      "hacktiv8",
+      "asik",
+      "lalala"
+    ],
+    "completed_date": "Wed Sep 11 2019 17:20:06 GMT+0700 (WIB)"
+  },
+  {
+    "id": 7,
+    "todo": "sebat lagi bos",
+    "created_date": "Wed Sep 11 2019 16:14:15 GMT+0700 (WIB)",
+    "status": false,
+    "tags": [
+      "merokok membunuhmu"
+    ],
+    "completed_date": null
+  },
+  {
+    "id": 8,
+    "todo": "makan mie ayam",
+    "created_date": "Wed Sep 11 2019 16:14:35 GMT+0700 (WIB)",
+    "status": true,
+    "tags": [
+      "food",
+      "hacktiv8"
+    ],
+    "completed_date": "Wed Sep 11 2019 16:23:19 GMT+0700 (WIB)"
+  }
+]
