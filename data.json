@@ -1,1 +1,58 @@
-[]
+[
+  {
+    "id": 1,
+    "task": "Go to grocery",
+    "isCompleted": true,
+    "created": "Wed Sep 11 2019 19:25:33 GMT+0700 (Western Indonesia Time)",
+    "tagName": [
+      "lifestyle"
+    ]
+  },
+  {
+    "id": 2,
+    "task": "sleep",
+    "isCompleted": true,
+    "created": "Wed Sep 11 2019 19:25:31 GMT+0700 (Western Indonesia Time)",
+    "tagName": [
+      "routine"
+    ]
+  },
+  {
+    "id": 3,
+    "task": "do all homework",
+    "isCompleted": true,
+    "created": "Wed Sep 11 2019 19:25:37 GMT+0700 (Western Indonesia Time)",
+    "tagName": [
+      "routine"
+    ]
+  },
+  {
+    "id": 4,
+    "task": "study",
+    "isCompleted": true,
+    "created": "Wed Sep 11 2019 19:25:40 GMT+0700 (Western Indonesia Time)",
+    "tagName": [
+      "activities",
+      "routine"
+    ]
+  },
+  {
+    "id": 5,
+    "task": "go to cinema",
+    "isCompleted": true,
+    "created": "Wed Sep 11 2019 19:25:43 GMT+0700 (Western Indonesia Time)",
+    "tagName": [
+      "hobby"
+    ]
+  },
+  {
+    "id": 6,
+    "task": "cleaning house",
+    "isCompleted": false,
+    "created": "Wed Sep 11 2019 19:25:59 GMT+0700 (Western Indonesia Time)",
+    "tagName": [
+      "activities",
+      "routine"
+    ]
+  }
+]
