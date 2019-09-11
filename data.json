@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "id": 4,
+    "task": "Ayo rombak lagi",
+    "completed": true,
+    "date": 1568194615040
+  },
+  {
+    "id": 6,
+    "task": "Cek lagi",
+    "completed": false,
+    "date": 1568191996754
+  },
+  {
+    "id": 1,
+    "task": "Yah mesti ngulang lagi",
+    "completed": false,
+    "date": 1568191766372
+  },
+  {
+    "id": 2,
+    "task": "Pastiin semua parameter masuk",
+    "completed": true,
+    "date": 1568191766372
+  }
+]
