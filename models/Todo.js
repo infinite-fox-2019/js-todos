@@ -30,7 +30,9 @@ class Todo {
   }
 
   static findById(id) {
-    return this.findAll().filter(d => d.id == id)
+    const newData = this.findAll().filter(d => d.id == id)
+    if (!filtered.length) return { isFound: false, id }
+    return newData
   }
 
   static delete(id) {
@@ -38,9 +40,44 @@ class Todo {
     this.save(newData)
   }
 
+  static complete(id) {
+    const data = this.findAll()
+    const newData = []
+
+    data.forEach(d => {
+      if (d.id == id) {
+        d.isComplete = true
+        newData.push(d)
+      } else {
+        newData.push(d)
+      }
+    })
+
+    this.save(data)
+    return data
+  }
+
+  static uncomplete(id) {
+    const data = this.findAll()
+    const newData = []
+
+    data.forEach(d => {
+      if (d.id == id) {
+        d.isComplete = false
+        newData.push(d)
+      } else {
+        newData.push(d)
+      }
+    })
+
+    this.save(data)
+    return data
+  }
+
   static save(data) {
     fs.writeFileSync('./data.json', JSON.stringify(data, null, 2))
   }
+  
 }
 
 module.exports = Todo

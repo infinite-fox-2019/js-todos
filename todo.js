@@ -15,6 +15,12 @@ switch(command) {
   case 'delete':
     TodoController.delete(args[0])
     break
+  case 'complete':
+    TodoController.complete(args[0])
+    break
+  case 'uncomplete':
+    TodoController.uncomplete(args[0])
+    break
   case 'help':
   case undefined:
     console.log('$ node todo.js # Will call help')

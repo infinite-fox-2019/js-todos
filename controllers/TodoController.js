@@ -22,6 +22,16 @@ class TodoController {
     Todo.delete(id)
     AlertViews.successMessageDelete(id)
   }
+
+  static complete(id) {
+    const data = Todo.complete(id)
+    TodoViews.complete(data)
+  }
+
+  static uncomplete(id) {
+    const data = Todo.uncomplete(id)
+    TodoViews.uncomplete(data)
+  }
 }
 
 module.exports = TodoController

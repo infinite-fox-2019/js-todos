@@ -4,7 +4,20 @@ class TodoViews {
   }
 
   static findById(data) {
-    console.log(data)
+    if (!data.isFound) {
+      console.log(`Todo with id ${data.id} does not exist.`)
+    } else {
+      const { id, todo } = data[0]
+      console.log(`${id}. ${todo}`)
+    }
+  }
+
+  static complete(data) {
+    console.table(data)
+  }
+
+  static uncomplete(data) {
+    console.table(data)
   }
 }
 
