@@ -27,13 +27,8 @@ class TodoController {
         TodoView.showList(todos);
     }
 
-    static uncompleteTodoById(id) {
-        let todos = Todo.uncompleteTodoById(id);
-        TodoView.showList(todos);
-    }
-
-    static getListSortByCreated() {
-        let todos = Todo.getListSortByCreated();
+    static getListSort(attribute, order) {
+        let todos = Todo.getListSort(attribute, order);
         TodoView.showList(todos);
     }
 }

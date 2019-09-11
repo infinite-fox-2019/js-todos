@@ -1,11 +1,15 @@
 const TodoController = require('./Controller/TodoController');
 
-let command = process.argv[2];
+let command = process.argv[2].split(':');
 let parameters = process.argv.slice(3);
 
-switch(command) {
+switch(command[0]) {
     case 'list':
-        TodoController.getList();
+        if(command[1]) {
+            TodoController.getListSort(command[1], parameters[0]);
+        } else {
+            TodoController.getList();
+        }
     break;
     case 'add':
         TodoController.add(parameters[0]);
@@ -21,9 +25,6 @@ switch(command) {
     break;
     case 'uncomplete':
         TodoController.completeById(Number(parameters[0]), false);
-    break;
-    case 'list:created':
-        TodoController.getListSort(Number(parameters[0]), 'created');
     break;
     default:
         console.log('node todo.js');
