@@ -28,6 +28,26 @@ class Todo {
 
         return undefined;
     }
+
+    static deleteTodoById(id) {
+        let todos = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
+        let theTask = '';
+        let theIndex = -1;
+        for(let i = 0; i < todos.length; i++) {
+            if(todos[i].id === id) {
+                theTask = todos[i].task;
+                theIndex = i;
+            }
+        }
+
+        if(theIndex >= 0) {
+            todos.splice(theIndex, 1);
+            fs.writeFileSync('./data.json', JSON.stringify(todos, 0, 2));
+            return theTask;
+        } else {
+            return undefined;
+        }
+    }
 }
 
 module.exports = Todo;

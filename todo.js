@@ -13,6 +13,9 @@ switch(command) {
     case 'findById':
         TodoController.getTodoById(Number(parameters[0]));
     break;
+    case 'delete':
+        TodoController.deleteTodoById(Number(parameters[0]));
+    break;
     default:
         console.log('node todo.js');
         console.log('node todo.js help');

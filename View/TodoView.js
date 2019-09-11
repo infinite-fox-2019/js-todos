@@ -16,6 +16,10 @@ class TodoView {
     static showAddMessage(task) {
         console.log(`Added ${task} to your TODO list...`)
     }
+
+    static showDeleteMessage(task) {
+        console.log(`Deleted ${task} from your TODO list...`)
+    }
 }
 
 module.exports = TodoView;
