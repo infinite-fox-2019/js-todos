@@ -46,12 +46,16 @@ switch(command) {
             Control.asc();
         } else if (parameter[0] === 'desc') {
             Control.desc();
+        } else if (parameter[0] === undefined) {
+            Control.desc();
         }
     break;
     case 'list:completed' :
         if (parameter[0] === 'asc'){
             Control.completeAsc();
         } else if (parameter[0] === 'desc') {
+            Control.completeDesc();
+        } else if (parameter[0] === undefined) {
             Control.completeDesc();
         }
     break;
