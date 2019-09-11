@@ -1,1 +1,89 @@
-[]
+[
+  {
+    "status": false,
+    "id": 1,
+    "todo": "Bikin aplikasi",
+    "createdAt": "1970-01-01T00:00:00.000Z",
+    "tag": "tugas"
+  },
+  {
+    "status": true,
+    "id": 2,
+    "todo": "Main Node.js",
+    "createdAt": "1970-01-01T00:00:00.000Z",
+    "tag": "tugas"
+  },
+  {
+    "status": false,
+    "id": 3,
+    "todo": "hello",
+    "createdAt": "1970-01-01T00:00:00.000Z",
+    "tag": "fun"
+  },
+  {
+    "status": false,
+    "id": 4,
+    "todo": "semangat kakak",
+    "createdAt": "1970-01-01T00:00:00.000Z",
+    "tag": "hacktiv8"
+  },
+  {
+    "status": false,
+    "id": 5,
+    "todo": "berusaha",
+    "createdAt": "1970-01-01T00:00:00.000Z",
+    "tag": "hacktiv8"
+  },
+  {
+    "status": false,
+    "id": 6,
+    "todo": "lelah",
+    "createdAt": "1970-01-01T00:00:00.000Z",
+    "tag": "hacktiv8"
+  },
+  {
+    "status": false,
+    "id": 7,
+    "todo": "ngapain yak",
+    "createdAt": "1970-01-01T00:00:00.000Z",
+    "tag": "daily"
+  },
+  {
+    "status": false,
+    "id": 8,
+    "todo": "maem",
+    "createdAt": "1970-01-01T00:00:00.000Z",
+    "tag": "bebas"
+  },
+  {
+    "status": false,
+    "id": 9,
+    "todo": "capek",
+    "createdAt": "1970-01-01T00:00:00.000Z",
+    "tag": "lelah"
+  },
+  {
+    "status": false,
+    "id": 10,
+    "todo": "makan",
+    "createdAt": "1970-01-01T00:00:00.000Z"
+  },
+  {
+    "status": false,
+    "id": 11,
+    "todo": "coba lagi",
+    "createdAt": "1970-01-01T00:00:00.000Z"
+  },
+  {
+    "status": false,
+    "id": 12,
+    "todo": "belajar live code",
+    "createdAt": "2019-09-11T11:21:38.542Z"
+  },
+  {
+    "status": false,
+    "id": 13,
+    "todo": "berusaha",
+    "createdAt": "2019-09-11T11:22:21.025Z"
+  }
+]
