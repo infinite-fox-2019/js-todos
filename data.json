@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": 1,
+    "task": "Bikin aplikasi",
+    "completed": false
+  },
+  {
+    "id": 2,
+    "task": "Main node js",
+    "completed": false
+  },
+  {
+    "id": 3,
+    "task": "Shut down my computer",
+    "completed": false
+  },
+  {
+    "id": 4,
+    "task": "Kerjain tugas",
+    "completed": false
+  }
+]
