@@ -3,15 +3,5 @@
         "id": 1,
         "todo": "Bikin Aplikasi",
         "completed": "X"
-    },
-    {
-        "id": 2,
-        "todo": "Main node.js",
-        "completed": ""
-    },
-    {
-        "id": 3,
-        "todo": "Buat dengan OOP",
-        "completed": ""
     }
 ]

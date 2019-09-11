@@ -31,6 +31,11 @@ class TodoController {
         const data = Todo.uncomplete(id)
         TodoView.displayList(data)
     }
+
+    static created_asc() {
+        const data = Todo.created_asc()
+        TodoView.displayList(data)
+    }
 }
 
 

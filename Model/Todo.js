@@ -5,6 +5,7 @@ class Todo {
         this.id = id
         this.todo = todo
         this.completed = ''
+        this.date = new Date()
     }
     
     static findAll() {
@@ -36,12 +37,10 @@ class Todo {
     
     static deleteData(id) {
         const data = JSON.parse(fs.readFileSync('./data.json'))
-        var index = 0
-        let temp_data = data[index] 
+        let temp_data = data[id-1] 
 
         for (let i = 0; i < data.length; i++) {
             if (data[i].id === id) {
-                index = i
                 data.splice(i, 1)
             }
         }
@@ -77,7 +76,26 @@ class Todo {
         fs.writeFileSync('./data.json', JSON.stringify(data, null, 4))
 
         return data
+    }
 
+    static created_asc() {
+        const data = JSON.parse(fs.readFileSync('./data.json'))
+
+        for (let i = 0; i < data.length; i++) {
+            data[i].date = new Date();
+        }
+
+        for (var i = 0; i < data.length-1; i++) {
+            for (var j = 0; j < data.length-i-1; j++) {
+                if (data[j].date > data[j+1].date) {
+                    var temp = data[j].date;
+                    data[j].date = data[j+1].date;
+                    data[j+1].date = temp;
+                }
+            }
+        }
+
+        return data
     }
 
 }

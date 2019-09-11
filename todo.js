@@ -30,6 +30,9 @@ switch(command) {
         TodoController.complete(parameter_number)
         break;
     case 'uncomplete':
-            TodoController.uncomplete(parameter_number)
+        TodoController.uncomplete(parameter_number)
         break; 
+    case 'created_asc':
+        TodoController.created_asc()
+        break;
 }
