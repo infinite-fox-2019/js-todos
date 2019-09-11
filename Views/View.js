@@ -1,6 +1,7 @@
 const Model = require('../Models/Task')
 
 class View {
+
   static help () {
     console.log(`Available Commands`)
     console.log(`==================`)
@@ -20,6 +21,7 @@ class View {
     console.log(`$ node todo.js tag <task_id> <tag_name_1> <tag_name_2> ... <tag_name_N>`)
     console.log(`$ node todo.js filter <tag_name>`)
   }
+
   static list() {
     console.log("To-Do List");
     console.log(`========== `)
@@ -38,21 +40,73 @@ class View {
       str = ''
     }
   }
+
   static add(parameters) {
     for (let i = 0; i < parameters.length; i++) {
       console.log(`"${parameters[i]}" is added to your To-Do List`);
     }
   }
+
   static findById(parameters) {
     for (let i = 0; i < parameters.length; i++) {
-      console.log(`${parameters[i].id}. ${parameters[i].task}`);
+      for (let i = 0; i < parameters.length; i++) {
+        let str = ''
+        str += parameters[i].id + '. '
+        if (parameters[i].completed == true) {
+          str += '[x]'
+        }
+        else {
+          str += '[ ]'
+        }
+        str += ` ${parameters[i].task}`
+        console.log (str)
+        str = ''
+      }
     }
   }
+
   static delete(parameters) {
     for (let i = 0; i < parameters.length; i++) {
       console.log(`"${parameters[i].task}" is deleted from your To-Do List`);
     }
   }
+
+  static listSortByCreated(parameters) {
+    console.log("To-Do List");
+    console.log(`========== `)
+    for (let i = 0; i < parameters.length; i++) {
+      let str = ''
+      str += parameters[i].id + '. '
+      if (parameters[i].completed == true) {
+        str += '[x]'
+      }
+      else {
+        str += '[ ]'
+      }
+      str += ` ${parameters[i].task}`
+      console.log (str)
+      str = ''
+    }
+  }
+
+  static listSortByCompleted(parameters) {
+    console.log("To-Do List");
+    console.log(`========== `)
+    for (let i = 0; i < parameters.length; i++) {
+      let str = ''
+      str += parameters[i].id + '. '
+      if (parameters[i].completed === true) {
+        str += '[x]'
+      }
+      else {
+        str += '[ ]'
+      }
+      str += ` ${parameters[i].task}`
+      console.log (str)
+      str = ''
+    }
+  }
+
 }
 
 module.exports = View

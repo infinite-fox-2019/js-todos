@@ -26,9 +26,11 @@ class Controller {
     Model.uncomplete(parameters)
     View.list()
   }
-  static listCreated(parameter) {
-    Model.listSortByCreated(parameter)
-    // View.list()
+  static listSortByCreated(parameter) {
+    View.listSortByCreated(Model.listSortByCreated(parameter))
+  }
+  static listSortByCompleted(parameter) {
+    View.listSortByCompleted(Model.listSortByCompleted(parameter))
   }
 }
 

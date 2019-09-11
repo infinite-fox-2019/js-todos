@@ -33,13 +33,6 @@ switch (command) {
     Controller.listSortByCreated(parameters[0])
     break
   case 'list:completed':
-    // 
+    Controller.listSortByCompleted(parameters[0])
     break
-  case 'tag':
-    // 
-    break
-  case 'filter':
-    // 
-    break
-  
 }

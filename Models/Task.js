@@ -108,7 +108,8 @@ class Task {
           taskListUpdate.push((new Task(
             data[i].id,
             data[i].task,
-            true
+            true,
+            new Date().getTime()
           )))
         }
         else {
@@ -141,13 +142,52 @@ class Task {
   }
 
   // sort list by created
-  // static listByCreated(parameters) {
-  //   this.data = JSON.parse(fs.readFileSync('./data.json', 'utf8'))
-  //   let taskListSorted = []
-  //   for (let i = 0; i < this.data.length; i++) {
-  //     let temp = 
-  //   }
-  // }
+  static listSortByCreated(parameter) {
+    const data = this.list()
+    if (parameter === undefined || parameter === 'asc') {
+      for (let i = 0; i < data.length; i++) {
+        for (let j = i+1; j < data.length; j++) {
+          if (data[j].date < data[i].date) {
+            [data[i], data[j]] = [data[j], data[i]];
+          }
+        }
+      }
+    }
+    else if (parameter === 'desc') {
+      for (let i = 0; i < data.length; i++) {
+        for (let j = i+1; j < data.length; j++) {
+          if (data[j].date > data[i].date) {
+            [data[i], data[j]] = [data[j], data[i]];
+          }
+        }
+      }
+    }
+    return data
+  }
+
+  // sort list by completed
+  static listSortByCompleted(parameter) {
+    const data = this.list()
+    if (parameter === undefined || parameter === 'asc') {
+      for (let i = 0; i < data.length; i++) {
+        for (let j = i+1; j < data.length; j++) {
+          if (data[j].completed === true) {
+            [data[i], data[j]] = [data[j], data[i]];
+          }
+        }
+      }
+    }
+    else if (parameter === 'desc') {
+      for (let i = 0; i < data.length; i++) {
+        for (let j = i+1; j < data.length; j++) {
+          if (data[j].completed === false) {
+            [data[i], data[j]] = [data[j], data[i]];
+          }
+        }
+      }
+    }
+    return data
+  }
 }
 
 module.exports = Task 
