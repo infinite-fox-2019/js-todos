@@ -7,6 +7,7 @@ class Task {
         this.completed = ' '
         this.tags = []
         this.timeCreated = new Date()
+        this.timeCompleted = ''
     }
 
     static fileParsed() {
@@ -51,6 +52,7 @@ class Task {
         for (let i = 0; i < data.length; i++) {
             if (data[i].id === Number(index)) {
                 data[i].completed = 'x'
+                data[i].timeCompleted = new Date
             }
         }
         this.save(data)
@@ -62,13 +64,14 @@ class Task {
         for (let i = 0; i < data.length; i++) {
             if (data[i].id === Number(index)) {
                 data[i].completed = ' '
+                data[i].timeCompleted = ''
             }
         }
         this.save(data)
         return data
     }
 
-    static asc() {
+    static createdAsc() {
         const data = this.fileParsed()
         for (let i = 0; i < data.length; i++) {
             for (let j = i + 1; j <= data.length - 1; j++) {
@@ -81,11 +84,37 @@ class Task {
         return data
     }
 
-    static desc() {
+    static createdDesc() {
         const data = this.fileParsed()
         for (let i = 0; i < data.length; i++) {
             for (let j = i + 1; j <= data.length - 1; j++) {
                 if (data[i].timeCreated < data[j].timeCreated) {
+                    [data[i],data[j]] = [data[j],data[i]]
+                }
+            }
+        }
+        this.save(data)
+        return data
+    }
+
+    static completedAsc() {
+        const data = this.fileParsed()
+        for (let i = 0; i < data.length; i++) {
+            for (let j = i + 1; j <= data.length - 1; j++) {
+                if (data[i].timeCompleted > data[j].timeCompleted) {
+                    [data[i],data[j]] = [data[j],data[i]]
+                }
+            }
+        }
+        this.save(data)
+        return data
+    }
+
+    static completedDesc() {
+        const data = this.fileParsed()
+        for (let i = 0; i < data.length; i++) {
+            for (let j = i + 1; j <= data.length - 1; j++) {
+                if (data[i].timeCompleted < data[j].timeCompleted) {
                     [data[i],data[j]] = [data[j],data[i]]
                 }
             }

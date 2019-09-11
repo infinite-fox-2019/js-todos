@@ -13,6 +13,8 @@ switch(command) {
         console.log('$ node todo.js delete <task_id>')
         console.log('$ node todo.js complete <task_id>')
         console.log('$ node todo.js uncomplete <task_id>')
+        console.log('$ node todo.js list:created asc || desc')
+        console.log('$ node todo.js list:completed asc || desc')
         break;
 
     case "list":
@@ -41,9 +43,17 @@ switch(command) {
 
     case "list:created":
         if (arguments[0] === 'asc') {
-            TaskController.asc()
+            TaskController.createdAsc()
         } else {
-            TaskController.desc()
+            TaskController.createdDesc()
+        }
+        break;
+
+    case "list:completed":
+        if (arguments[0] === 'asc') {
+            TaskController.completedAsc()
+        } else {
+            TaskController.completedDesc()
         }
         break;
 }

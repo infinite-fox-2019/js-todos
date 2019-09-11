@@ -32,13 +32,23 @@ class TaskController {
         TaskView.viewAll(data)
     }
 
-    static asc() {
-        const data = Task.asc()
+    static createdAsc() {
+        const data = Task.createdAsc()
         TaskView.viewAll(data)
     }
 
-    static desc() {
-        const data = Task.desc()
+    static createdDesc() {
+        const data = Task.createdDesc()
+        TaskView.viewAll(data)
+    }
+
+    static completedAsc() {
+        const data = Task.createdAsc()
+        TaskView.viewAll(data)
+    }
+
+    static completedDesc() {
+        const data = Task.createdDesc()
         TaskView.viewAll(data)
     }
 }
