@@ -66,16 +66,12 @@ class Todo {
 
   static complete(id) {
     const data = this.findAll()
-    const newData = []
 
     data.forEach(d => {
       if (d.id == id) {
         d.isComplete = true
         d.completed_date = new Date()
-        newData.push(d)
-      } else {
-        newData.push(d)
-      }
+      } 
     })
 
     this.save(data)
@@ -84,15 +80,11 @@ class Todo {
 
   static uncomplete(id) {
     const data = this.findAll()
-    const newData = []
 
     data.forEach(d => {
       if (d.id == id) {
         d.isComplete = false
-        newData.push(d)
-      } else {
-        newData.push(d)
-      }
+      } 
     })
 
     this.save(data)
@@ -101,9 +93,11 @@ class Todo {
 
   static tag(id, tags) {
     const data = this.findAll()
+    let todo = ''
 
     for (let i = 0; i < data.length; i++) {
       if (data[i].id == id) {
+        todo = data[i]
         for (let j = 0; j < tags.length; j++) {
           data[i].tags.push(tags[j])
         }
@@ -111,6 +105,7 @@ class Todo {
     }
 
     this.save(data)
+    return { todo, tags }
   }
 
   static filter(query) {

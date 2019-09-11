@@ -6,6 +6,10 @@ class AlertViews {
   static successMessageDelete(id) {
     console.log(`Todo with id '${id}' successfully deleted.`)
   }
+
+  static successMessageAddTags({ todo, tags }) {
+    console.log(`Tagged task '${todo.todo}' with tags: ${tags.join(', ')}`)
+  }
 }
 
 module.exports = AlertViews

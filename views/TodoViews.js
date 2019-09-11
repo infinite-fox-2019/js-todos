@@ -1,9 +1,9 @@
 class TodoViews {
   static list(data) {
-    const newData = data.map(d => {
-      return Date.parse(d.created_date)
+    data.forEach(d => {
+      const { id, isComplete, todo } = d
+      console.log(`${id}. ${isComplete ? '[x]' : '[ ]'} ${todo}`)
     })
-    console.table(data)
   }
 
   static findById(data) {
@@ -16,11 +16,11 @@ class TodoViews {
   }
 
   static complete(data) {
-    console.table(data)
+    console.log(data)
   }
 
   static uncomplete(data) {
-    console.table(data)
+    console.log(data)
   }
 
   static filter(data) {

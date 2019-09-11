@@ -11,31 +11,37 @@ class TodoController {
   static add(todo) {
     Todo.add(todo)
     AlertViews.successMessageAdd(todo)
+    TodoViews.list(data)
   }
 
   static findById(id) {
     const data = Todo.findById(id)
-    TodoViews.findById(data)
+    // TodoViews.findById(data)
+    TodoViews.list(data)
   }
 
   static delete(id) {
     Todo.delete(id)
     AlertViews.successMessageDelete(id)
+    TodoViews.list(data)
   }
 
   static complete(id) {
     const data = Todo.complete(id)
-    TodoViews.complete(data)
+    // TodoViews.complete(data)
+    TodoViews.list(data)
   }
 
   static uncomplete(id) {
     const data = Todo.uncomplete(id)
-    TodoViews.uncomplete(data)
+    // TodoViews.uncomplete(data)
+    TodoViews.list(data)
   }
 
   static tag(id, tags) {
-    Todo.tag(id, tags)
-    TodoViews.successMessageAdd(tags)
+    const data = Todo.tag(id, tags)
+    AlertViews.successMessageAddTags(data)
+    // TodoViews.list(data)
   }
 
   static filter(query) {
