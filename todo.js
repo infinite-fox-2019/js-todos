@@ -36,9 +36,14 @@ switch(command[0]) {
         console.log('node todo.js');
         console.log('node todo.js help');
         console.log('node todo.js list');
+        console.log('node todo.js list:created');
+        console.log('node todo.js list:created asc');
+        console.log('node todo.js list:created desc');
         console.log('node todo.js add <task_content>');
         console.log('node todo.js findById <task_id>');
         console.log('node todo.js delete <task_id>');
         console.log('node todo.js complete <task_id>');
         console.log('node todo.js uncomplete <task_id>');
+        console.log('node todo.js tag <task_id> <tag1> <tag2> <tagn>');
+        console.log('node todo.js filter:<tag>');
 }
