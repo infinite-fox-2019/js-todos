@@ -29,6 +29,13 @@ class Todo {
     this.save(data)
   }
 
+  static findById(id) {
+    const data = this.findAll()
+
+    // return data
+    return data.filter(d => d.id == id)
+  }
+
   static save(data) {
     fs.writeFileSync('./data.json', JSON.stringify(data, null, 2))
   }
