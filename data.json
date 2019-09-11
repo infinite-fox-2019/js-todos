@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "id": 1,
+    "task": "makan Subuh",
+    "status": [
+      "X"
+    ]
+  },
+  {
+    "id": 2,
+    "task": "makan Pagi",
+    "status": [
+      "X"
+    ]
+  },
+  {
+    "id": 3,
+    "task": "makan Siang",
+    "status": [
+      " "
+    ]
+  },
+  {
+    "id": 4,
+    "task": "makan malam",
+    "status": [
+      "X"
+    ]
+  }
+]
