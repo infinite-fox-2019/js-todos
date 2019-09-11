@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": 1,
+    "task": "wake up",
+    "isComplete": true,
+    "createdDate": "2019-09-11T15:30:29.352Z",
+    "tags": []
+  },
+  {
+    "id": 2,
+    "task": "go to hacktiv8",
+    "isComplete": false,
+    "createdDate": "2019-09-11T15:30:39.386Z",
+    "tags": [
+      "school",
+      "lifestyle"
+    ]
+  }
+]
