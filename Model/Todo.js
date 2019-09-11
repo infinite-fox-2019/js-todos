@@ -5,7 +5,7 @@ class Todo {
         this.id = id
         this.todo = todo
         this.completed = ''
-        this.date = new Date()
+        this.createdAt = new Date()
     }
     
     static findAll() {
@@ -56,6 +56,7 @@ class Todo {
         for (let i = 0; i < data.length; i++) {
             if (data[i].id === id) {
                 data[i].completed = 'X'
+                data[i].createdAt = new Date()
             }
         }
 
@@ -81,19 +82,23 @@ class Todo {
     static created_asc() {
         const data = JSON.parse(fs.readFileSync('./data.json'))
 
-        for (let i = 0; i < data.length; i++) {
-            data[i].date = new Date();
-        }
+        data.sort(function(a,b){
+            var c = new Date(a.createdAt);
+            var d = new Date(b.createdAt);
+            return c-d;
+        });
 
-        for (var i = 0; i < data.length-1; i++) {
-            for (var j = 0; j < data.length-i-1; j++) {
-                if (data[j].date > data[j+1].date) {
-                    var temp = data[j].date;
-                    data[j].date = data[j+1].date;
-                    data[j+1].date = temp;
-                }
-            }
-        }
+        return data
+    }
+
+    static created_desc(){
+        const data = JSON.parse(fs.readFileSync('./data.json'))
+
+        data.sort(function(a,b){
+            var c = new Date(a.createdAt);
+            var d = new Date(b.createdAt);
+            return d-c;
+        });
 
         return data
     }

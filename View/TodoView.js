@@ -1,7 +1,7 @@
 class TodoView {
     static displayList(data) {
         for (let i = 0; i < data.length; i++) {
-            console.log(`${data[i].id}. [${data[i].completed}] ${data[i].todo} Date: ${data[i].date}`)
+            console.log(`${data[i].id}. [${data[i].completed}] ${data[i].todo}, Date: ${data[i].createdAt}`)
         }
     }
 

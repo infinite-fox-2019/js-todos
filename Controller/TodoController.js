@@ -32,13 +32,16 @@ class TodoController {
         TodoView.displayList(data)
     }
 
-    static created_asc() {
+    static createdAsc() {
         const data = Todo.created_asc()
         TodoView.displayList(data)
     }
+
+    static createdDesc() {
+        const data = Todo.created_desc()
+        TodoView.displayList(data)
+    }
 }
-
-
 
 
 module.exports = TodoController
