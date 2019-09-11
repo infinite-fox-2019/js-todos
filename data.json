@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "id": 1,
+    "task": "Bikin Aplikasi",
+    "completed": false,
+    "date": "Wed Sep 11 2019 22:54:36 GMT+0700 (ICT)"
+  },
+  {
+    "id": 2,
+    "task": "Tidur",
+    "completed": false,
+    "date": "Wed Sep 11 2019 22:54:36 GMT+0700 (ICT)"
+  },
+  {
+    "id": 3,
+    "task": "Belajar",
+    "completed": true,
+    "date": "Wed Sep 11 2019 22:54:36 GMT+0700 (ICT)"
+  },
+  {
+    "id": 4,
+    "task": "belajar lagi",
+    "completed": false,
+    "date": "Wed Sep 11 2019 22:54:36 GMT+0700 (ICT)"
+  }
+]
