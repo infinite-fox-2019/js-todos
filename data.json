@@ -1,1 +1,57 @@
-[]
+[
+  {
+    "id": "1.",
+    "status": "[ ]",
+    "todo": "Bikin Aplikasi",
+    "created_date": "Wed Sep 11 2019 16:36:19 GMT+0700 (Western Indonesia Time)",
+    "completed_date": null,
+    "tag": []
+  },
+  {
+    "id": "2.",
+    "status": "[x]",
+    "todo": "Main node.js",
+    "created_date": "Wed Sep 11 2019 16:36:19 GMT+0700 (Western Indonesia Time)",
+    "completed_date": "Wed Sep 11 2019 19:12:27",
+    "tag": [
+      "makan",
+      "sapi",
+      "ayam"
+    ]
+  },
+  {
+    "id": "3.",
+    "status": "[ ]",
+    "todo": "Testing",
+    "created_date": "Wed Sep 11 2019 16:36:19 GMT+0700 (Western Indonesia Time)",
+    "completed_date": null,
+    "tag": [
+      "makan",
+      "sapi"
+    ]
+  },
+  {
+    "id": "4.",
+    "status": "[ ]",
+    "todo": "makan lagi",
+    "created_date": "Wed Sep 11 2019 16:44:27 GMT+0700 (Western Indonesia Time)",
+    "completed_date": null,
+    "tag": []
+  },
+  {
+    "id": "5.",
+    "status": "[x]",
+    "todo": "sekarang minum",
+    "created_date": "Wed Sep 11 2019 17:16:52 GMT+0700 (Western Indonesia Time)",
+    "completed_date": "Wed Sep 11 2019 19:02:21",
+    "tag": []
+  },
+  {
+    "id": "6.",
+    "status": "[ ]",
+    "todo": "sekarang minum lagi",
+    "created_date": "Wed Sep 11 2019 18:14:25 GMT+0700 (Western Indonesia Time)",
+    "completed_date": "Wed Sep 11 2019 19:03:08",
+    "tag": []
+  }
+]
