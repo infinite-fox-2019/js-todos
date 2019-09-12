@@ -1,1 +1,14 @@
-[]
+[
+    {
+        "id": 1,
+        "todo": "Bikin Aplikasi",
+        "completed": "X",
+        "createdAt": "2019-09-11T10:06:20.650Z"
+    },
+    {
+        "id": 2,
+        "todo": "Main node.js",
+        "completed": "",
+        "createdAt": "2019-09-11T10:06:20.677Z"
+    }
+]
