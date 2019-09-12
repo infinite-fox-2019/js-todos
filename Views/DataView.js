@@ -29,8 +29,10 @@ class DataView {
             console.log(`${arrOfTask[i].id}. [${arrOfTask[i].status}] ${arrOfTask[i].task}`);
         }
     }
-    static uncompleted(id) {
-        
+    static uncompleted(arrOfTask) {
+        for (let i=0; i<arrOfTask.length; i++) {
+            console.log(`${arrOfTask[i].id}. [${arrOfTask[i].status}] ${arrOfTask[i].task}`);
+        }
     }
 }
 

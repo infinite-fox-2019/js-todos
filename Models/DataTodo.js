@@ -57,6 +57,72 @@ class Data {
             }
         }
     }
+    static asc() {
+        let arrOfTasks = this.list()
+        for (let i = 0; i < arrOfTasks.length; i++) {
+            for (let j = i +1; j < arrOfTasks.length; j++) {
+                if (arrOfTasks[i].time > arrOfTasks[j].time) {
+                    [arrOfTasks[i],arrOfTasks[j]] = [arrOfTasks[j],arrOfTasks[i]];
+                }
+            }
+        }
+        return arrOfTasks;
+    }
+    static desc() {
+        let arrOfTasks = this.list()
+        for (let i = 0; i < arrOfTasks.length; i++) {
+            for (let j = i +1; j < arrOfTasks.length; j++) {
+                if (arrOfTasks[i].time < arrOfTasks[j].time) {
+                    [arrOfTasks[i],arrOfTasks[j]] = [arrOfTasks[j],arrOfTasks[i]];
+                }
+            }
+        }
+        return arrOfTasks;
+    }
+    static completeAsc() {
+        let arrOfTasks = this.list()
+        let temp = [];
+        this.asc();
+        for (let i = 0; i < arrOfTasks.length; i++) {
+            if (arrOfTasks[i].status[0] === 'V') {
+                temp.push(arrOfTasks[i]);
+            }
+        }
+        return temp;
+    }
+    static completeDesc() {
+        let arrOfTasks = this.list()
+        let temp = [];
+        this.desc();
+        for (let i = 0; i < arrOfTasks.length; i++) {
+            if (arrOfTasks[i].status[0] === 'V') {
+                temp.push(arrOfTasks[i]);
+            }
+        }
+        return temp;
+    }
+    static tag(id,tagName) {
+        let arrOfTasks = this.list()
+        for (let i = 0; i < arrOfTasks.length; i++) {
+            if (Number(arrOfTasks[i].id) === Number(id)) {
+                arrOfTasks[i].tagName = tagName;
+            }
+        }
+        fs.writeFileSync('./data.json', JSON.stringify(arrOfTasks, null, 2))
+        return arrOfTasks;
+    }
+    static filterTag(tagName) {
+        let arrOfTasks = this.list()
+        let temp = [];
+        for (let i = 0; i < arrOfTasks.length; i++) {
+            for (let j = 0; j< arrOfTasks[i].tagName.length; j++) {
+                if (arrOfTasks[i].tagName[j] === tagName) {
+                    temp.push(arrOfTasks[i]);
+                }
+            }
+        }
+        return temp;
+    }
 }
 
 

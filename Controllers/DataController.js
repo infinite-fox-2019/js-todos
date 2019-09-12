@@ -29,6 +29,30 @@ class DataController {
         let uncompletedTask = DataModel.uncomplete(id)
         DataView.complete(uncompletedTask)
     }
+    static asc() {
+        let dataAsc = DataModel.asc();
+        View.View(dataAsc);
+    }
+    static desc() {
+        let dataDesc = DataModel.desc();
+        View.View(dataDesc);
+    }
+    static completeAsc() {
+        let dataComplAsc = DataModel.completeAsc();
+        View.View(dataComplAsc);
+    }
+    static completeDesc() {
+        let dataCompDesc = DataModel.completeDesc();
+        View.View(dataCompDesc);
+    }
+    static tag(id,tagName) {
+        let taskTag = DataModel.tag(id,tagName);
+        View.View(taskTag);
+    }
+    static filterTag(tagName) {
+        let tagFiltered = DataModel.filterTag(tagName);
+        View.View(tagFiltered);
+    }
 }
 
 module.exports = DataController
