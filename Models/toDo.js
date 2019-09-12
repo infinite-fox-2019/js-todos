@@ -1,11 +1,12 @@
 const fs = require('fs');
 
 class ToDoList {
-    constructor(date, id, status, task) {
+    constructor(date, id, status, task, tags = []) {
         this.createdDate = date;
         this.id = id;
         this.status = status;
         this.task = task;
+        this.tags = tags;
     }
 
     static readTask() {
@@ -17,7 +18,7 @@ class ToDoList {
         const list = this.readTask();
         const listArr = [];
         for(let i = 0; i < list.length; i++) {
-            listArr.push(new ToDoList(list[i].createdDate, list[i].id, list[i].status, list[i].task));
+            listArr.push(new ToDoList(list[i].createdDate, list[i].id, list[i].status, list[i].task, list[i].tags));
         }
         return listArr;
     }
@@ -27,7 +28,8 @@ class ToDoList {
         let id = list[list.length-1].id + 1;
         let createdDate = new Date();
         let status = false;
-        const addedTask = new ToDoList(createdDate, id, status, task);
+        let tags = [];
+        const addedTask = new ToDoList(createdDate, id, status, task, tags);
         list.push(addedTask);
         this.save(list);
         return addedTask;
@@ -114,6 +116,53 @@ class ToDoList {
         }
         return allTasks;
     }
+
+    static completeSortAsc() {
+        let result = [];
+        const allTasks = this.asc();
+        for(let i = 0; i < allTasks.length; i++) {
+            if(allTasks[i].status === true) {
+                result.push(allTasks[i])
+            }
+        }
+        return result;
+    }
+
+    static completeSortDesc() {
+        let result = [];
+        const allTasks = this.asc();
+        for(let i = 0; i < allTasks.length; i++) {
+            if(allTasks[i].status === false) {
+                result.push(allTasks[i])
+            }
+        }
+        return result;
+    }
+
+    static tags(id, tags) {
+        let allTasks = this.showAllTask();
+        for(let i = 0; i < allTasks.length; i++) {
+            if(parseInt(allTasks[i].id) === parseInt(id)) {
+                allTasks[i].tags = tags;
+            }
+        }
+        this.save(allTasks);
+        return allTasks;
+    }
+
+    static filterTags(tags) {
+        let allTasks = this.showAllTask();
+        let result = [];
+        for(let i = 0; i < allTasks.length; i++) {
+            for(let j = 0; j < allTasks[i].tags.length; j++) {
+                if(allTasks[i].tags[j] === tags) {
+                    result.push(allTasks[i]);
+                }
+            }
+        }
+        return result;
+    }
+
 }
 
 module.exports = ToDoList;

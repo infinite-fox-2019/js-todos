@@ -45,6 +45,26 @@ class ToDoController {
         const sortDesc = ToDoList.desc();
         ViewMessage.descByDate(sortDesc);
     }
+
+    static completeSortAsc() {
+        const completeAsc = ToDoList.completeSortAsc()
+        ViewMessage.showCompleteAsc(completeAsc);
+    }
+
+    static completeSortDesc() {
+        const completeDesc = ToDoList.completeSortDesc()
+        ViewMessage.showCompleteAsc(completeDesc);
+    }
+
+    static tags(id, tags) {
+        const taggedTask = ToDoList.tags(id, tags)
+        ViewMessage.showTags(taggedTask);
+    }
+
+    static filteredTag(tag) {
+        const filteredTag = ToDoList.filterTask(tag);
+        ViewMessage.showFilteredTag(filteredTag);
+    }
 }
 
 module.exports = ToDoController;

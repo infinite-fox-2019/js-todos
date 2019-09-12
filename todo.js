@@ -1,6 +1,7 @@
 const argv = process.argv.slice(2);
 const command = argv[0];
 const input = argv[1];
+const tags = process.argv.slice(4);
 const Controller = require('./Controllers/toDoController')
 
 switch(command) {
@@ -26,13 +27,28 @@ switch(command) {
         Controller.incompletedTask(input);
         break;
     case "list:created":
-        if (argv[1] === 'asc'){
+        if (input === 'asc'){
             Controller.ascByDate();
-        } else if (argv[1] === 'desc') {
+        } else if (input === 'desc') {
             Controller.descByDate();
-        } else if (argv[1] === undefined) {
+        } else if (input === undefined) {
             Controller.descByDate();
         }
+        break;
+    case "list:completed":
+            if (input === 'asc'){
+                Controller.completeSortAsc();
+            } else if (input === 'desc') {
+                Controller.completeSortDesc();
+            } else if (input === undefined) {
+                Controller.descByDate();
+            }
+            break;
+    case 'tag':
+        Controller.tags(input, tags);
+        break;
+    case `filter:`:
+        Controller.filteredTag();
         break;
     default:
         Controller.showHelp();

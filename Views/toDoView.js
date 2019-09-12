@@ -55,6 +55,22 @@ class ViewMessage {
         console.log(allTask)
     }
 
+    static showCompleteAsc(completeAsc) {
+        console.log(completeAsc);
+    }
+
+    static showCompleteDesc(completeDesc) {
+        console.log(completeDesc);
+    }
+
+    static showTags(taggedTask) {
+        console.log(taggedTask);
+    }
+
+    static showFilteredTag(filteredTaggedTask) {
+        console.log(filteredTaggedTask);
+    }
+
 }
 
 module.exports = ViewMessage;
