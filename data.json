@@ -1,1 +1,67 @@
-[]
+[
+  {
+    "id": 1,
+    "status": " ",
+    "task": "dancing",
+    "time": "Wed Sep 13 2019 08:50:10 GMT+0700 (Western Indonesia Time)",
+      "tagName": [
+        "lifestyle",
+        "hobby"
+      ]
+  },
+  {
+    "id": 2,
+    "status": "x",
+    "task": "grocery shopping",
+    "time": "Wed Sep 13 2019 08:50:14 GMT+0700 (Western Indonesia Time)",
+      "tagName": [
+        "monthly duty"
+      ]
+  },
+  {
+    "id": 3,
+    "status": " ",
+    "task": "house chore",
+    "time": "Wed Sep 13 2019 08:50:15 GMT+0700 (Western Indonesia Time)",
+      "tagName": [
+        "daily duty"
+      ]
+  },
+  {
+    "id": 4,
+    "status": " ",
+    "task": "laundry",
+    "time": "Wed Sep 13 2019 08:50:17 GMT+0700 (Western Indonesia Time)",
+      "tagName": [
+        "daily duty"
+      ]
+  },
+  {
+    "id": 5,
+    "status": "x",
+    "task": "laundry",
+    "time": "Wed Sep 13 2019 08:50:17 GMT+0700 (Western Indonesia Time)",
+      "tagName": [
+        "daily duty"
+      ]
+  },
+  {
+    "id": 6,
+    "status": "x",
+    "task": "nyetrika",
+    "time": "Wed Sep 13 2019 08:50:20 GMT+0700 (Western Indonesia Time)",
+      "tagName": [
+        "daily duty"
+      ]
+  },
+  {
+    "id": 7,
+    "status": " ",
+    "task": "singing",
+    "time": "Wed Sep 13 2019 08:50:22 GMT+0700 (Western Indonesia Time)",
+      "tagName": [
+        "lifestyle",
+        "hobby"
+      ]
+  }
+]
