@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "id": 1,
+    "kegiatan": "pergi ke pasar",
+    "status": true,
+    "date": "2019-09-11T08:13:06.241Z",
+    "update": "2019-09-11T09:06:51.433Z",
+    "tag": []
+  },
+  {
+    "id": 3,
+    "kegiatan": "pulang",
+    "status": false,
+    "date": "2019-09-11T08:54:52.386Z",
+    "tag": []
+  },
+  {
+    "id": 4,
+    "kegiatan": "pergi ke pasar",
+    "status": true,
+    "date": "2019-09-11T08:31:49.987Z",
+    "update": "2019-09-11T09:06:58.545Z",
+    "tag": []
+  },
+  {
+    "id": 5,
+    "kegiatan": "pulang",
+    "status": false,
+    "date": "2019-09-11T08:53:20.584Z",
+    "tag": []
+  },
+  {
+    "id": 6,
+    "kegiatan": "mandi",
+    "status": false,
+    "date": "2019-09-11T09:56:02.493Z",
+    "update": null,
+    "tag": [
+      "kewajiban"
+    ]
+  }
+]
