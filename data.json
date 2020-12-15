@@ -1,1 +1,35 @@
-[]
+[
+  {
+    "id": 1,
+    "status": " ",
+    "task": "belajar",
+    "created": "2019-09-11T09:31:52.887Z",
+    "completedDate": null,
+    "tag": [
+      "lifestyle"
+    ]
+  },
+  {
+    "id": 2,
+    "status": "x",
+    "task": "membaca",
+    "created": "2019-09-11T09:31:55.812Z",
+    "completedDate": "2019-09-11T10:13:59.436Z",
+    "tag": [
+      "hobby",
+      "lifestyle"
+    ]
+  },
+  {
+    "id": 3,
+    "status": "x",
+    "task": "coding",
+    "created": "2019-09-11T09:59:45.453Z",
+    "completedDate": "2019-09-11T11:26:55.183Z",
+    "tag": [
+      "hobby",
+      "lifestyle",
+      "exercise"
+    ]
+  }
+]
