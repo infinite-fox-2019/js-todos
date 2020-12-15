@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "_id": 1,
+    "_task": "bangun pagi",
+    "_completed": false,
+    "_createdAt": "2019-09-11T15:23:04.505Z",
+    "_dateCompleted": null,
+    "_tag": [
+      "selasa"
+    ]
+  },
+  {
+    "_id": 2,
+    "_task": "mandi",
+    "_completed": false,
+    "_createdAt": "2019-09-11T15:23:21.678Z",
+    "_dateCompleted": null,
+    "_tag": []
+  },
+  {
+    "_id": 4,
+    "_task": "livecode",
+    "_completed": false,
+    "_createdAt": "2019-09-11T15:23:33.034Z",
+    "_dateCompleted": null,
+    "_tag": []
+  },
+  {
+    "_id": 5,
+    "_task": "tidur",
+    "_completed": true,
+    "_createdAt": "2019-09-11T15:23:38.282Z",
+    "_dateCompleted": "2019-09-11T15:30:02.922Z",
+    "_tag": []
+  },
+  {
+    "_id": 6,
+    "_task": "mandi lagi",
+    "_completed": false,
+    "_createdAt": "2019-09-11T15:27:50.046Z",
+    "_dateCompleted": null,
+    "_tag": []
+  }
+]
