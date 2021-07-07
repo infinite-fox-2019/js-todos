@@ -1,1 +1,69 @@
-[]
+[
+  {
+    "id": 1,
+    "task": "makan",
+    "status": [
+      "V"
+    ],
+    "time": "Wed Sep 11 2019 18:25:33 GMT+0700 (Western Indonesia Time)",
+    "tagName": [
+      "lifestyle",
+      "food"
+    ]
+  },
+  {
+    "id": 2,
+    "task": "minum",
+    "status": [
+      "V"
+    ],
+    "time": "Wed Sep 11 2019 18:25:31 GMT+0700 (Western Indonesia Time)",
+    "tagName": []
+  },
+  {
+    "id": 3,
+    "task": "belajar",
+    "status": [
+      "V"
+    ],
+    "time": "Wed Sep 11 2019 18:25:37 GMT+0700 (Western Indonesia Time)",
+    "tagName": [
+      "hobby"
+    ]
+  },
+  {
+    "id": 4,
+    "task": "bernyanyi",
+    "status": [
+      "V"
+    ],
+    "time": "Wed Sep 11 2019 18:25:40 GMT+0700 (Western Indonesia Time)",
+    "tagName": [
+      "hobby",
+      "lifestyle"
+    ]
+  },
+  {
+    "id": 5,
+    "task": "bangun tidur",
+    "status": [
+      "V"
+    ],
+    "time": "Wed Sep 11 2019 18:25:43 GMT+0700 (Western Indonesia Time)",
+    "tagName": [
+      "hobby"
+    ]
+  },
+  {
+    "id": 6,
+    "task": "bangun tidur ahoy",
+    "status": [
+      " "
+    ],
+    "time": "Wed Sep 11 2019 18:26:05 GMT+0700 (Western Indonesia Time)",
+    "tagName": [
+      "activities",
+      "routine"
+    ]
+  }
+]
